@@ -1,0 +1,21 @@
+title: Snakie
+description: Snakie.org - The home of Snakie
+url: "https://snakie.org"
+baseurl: ""
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Author
+author:
+  name: Snakie
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
