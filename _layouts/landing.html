@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  {% seo %}
+  {% feed_meta %}
+  <style>
+    html{scroll-behavior:smooth;}
+    body{margin:0;}
+    *{box-sizing:border-box;}
+    ::selection{background:#34ad4f;color:#fff;}
+
+    /* hover states (ported from the design's style-hover attributes) */
+    .nav-link:hover{color:#218c39 !important;}
+    .gh-link:hover{color:#26241f !important;}
+    .btn-green:hover{filter:brightness(1.06);}
+    .os-pick:hover{background:rgba(255,255,255,.5) !important;}
+    .copy-btn:hover{color:#cfe0d4 !important;border-color:#5a5e66 !important;}
+    .foot-link:hover{color:#fff !important;}
+
+    /* responsive: collapse the desktop grids on smaller screens */
+    @media (max-width:860px){
+      .grid-3{grid-template-columns:1fr !important;}
+      .grid-2-board{grid-template-columns:1fr !important;}
+      .grid-2-build{grid-template-columns:1fr !important;}
+      .footer-grid{grid-template-columns:1fr 1fr !important;}
+      .nav-links{display:none !important;}
+      .hero-h1{font-size:40px !important;}
+    }
+    @media (max-width:520px){
+      .footer-grid{grid-template-columns:1fr !important;}
+      .hero-h1{font-size:32px !important;}
+    }
+  </style>
+</head>
+<body>
+  {{ content }}
+
+  <script>
+    (function () {
+      // OS detection for the hero sub-line (ported from the design's DCLogic component)
+      var el = document.getElementById('os-detect');
+      if (el) {
+        var p = '';
+        try {
+          p = ((navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || '').toLowerCase();
+        } catch (e) {}
+        var os = 'mac';
+        if (p.indexOf('win') !== -1) os = 'win';
+        else if (p.indexOf('linux') !== -1 && p.indexOf('android') === -1) os = 'linux';
+        var names = { mac: 'macOS', win: 'Windows', linux: 'Linux' };
+        var files = { mac: 'the .dmg', win: 'the .exe installer', linux: 'the AppImage' };
+        el.textContent = 'Looks like you’re on ' + names[os] + ' — grab ' + files[os] + '.';
+      }
+
+      // Copy-to-clipboard for the "build from source" terminal
+      var btn = document.getElementById('copy-btn');
+      if (btn) {
+        var t;
+        btn.addEventListener('click', function () {
+          var cmd = 'git clone https://github.com/kevinmcaleer/Snakie && cd Snakie && npm install && npm run dev';
+          try { navigator.clipboard.writeText(cmd); } catch (e) {}
+          btn.textContent = 'Copied!';
+          clearTimeout(t);
+          t = setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

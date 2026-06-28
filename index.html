@@ -1,0 +1,347 @@
+---
+layout: landing
+title: "Snakie — the MicroPython IDE that looks as good as it works"
+description: "Snakie is a clean, cross-platform editor for writing MicroPython and working with connected boards — editor, REPL, live Board View and on-screen instruments, in one window."
+---
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="snake" viewBox="0 0 32 32"><linearGradient id="snkg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#86df6f"></stop><stop offset="1" stop-color="#369b2c"></stop></linearGradient><path d="M10 27c0-4 6-3.5 6-8s-6-3.5-6-8 5.5-5 10-3.6" fill="none" stroke="url(#snkg)" stroke-width="4.3" stroke-linecap="round"></path><circle cx="21" cy="7" r="3.7" fill="url(#snkg)" stroke="#2f7a28" stroke-width="0.7"></circle><circle cx="22.1" cy="6.3" r="0.95" fill="#16240f"></circle><path d="M24.4 8l3 .7m-3-.7l3-.9" stroke="#e23b2b" stroke-width="1.1" stroke-linecap="round"></path></symbol>
+  <symbol id="ic-edit" viewBox="0 0 24 24"><path d="M8.5 8L4.5 12l4 4M15.5 8l4 4-4 4M13.4 5.6l-2.8 12.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-terminal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M7 10l3 2.5-3 2.5M12.5 15.5H17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-chip" viewBox="0 0 24 24"><rect x="7.5" y="7.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 4.5v3M14 4.5v3M10 16.5v3M14 16.5v3M4.5 10h3M4.5 14h3M16.5 10h3M16.5 14h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="ic-scope" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5.5 13h2.6l1.6-4 2.6 8 2-6h4.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="5" r="2.1" fill="currentColor" stroke="none"/><circle cx="6" cy="19" r="2.1" fill="currentColor" stroke="none"/><circle cx="18" cy="7" r="2.1" fill="currentColor" stroke="none"/><path d="M6 7.1v9.8"/><path d="M18 9.1c0 5-12 2-12 7.7"/></g></symbol>
+  <symbol id="ic-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-2 8 9-13h-7z" fill="currentColor"/></symbol>
+  <symbol id="ic-download" viewBox="0 0 24 24"><path d="M12 4v10M7.8 11l4.2 4.2L16.2 11M5.5 19.5h13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 6.5" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<div style="background:#e7e5df; font-family:Helvetica,Arial,sans-serif; color:#26241f; -webkit-font-smoothing:antialiased; overflow-x:hidden;">
+
+  <!-- ===================== NAV ===================== -->
+  <nav style="position:sticky; top:0; z-index:50; height:62px; display:flex; align-items:center; background:linear-gradient(180deg,#f6f7f9,#d2d6dd 55%,#bfc4cd); border-bottom:1px solid #8d9099; box-shadow:inset 0 1px 0 #fff,0 1px 3px rgba(0,0,0,.18);">
+    <div style="width:100%; max-width:1180px; margin:0 auto; padding:0 32px; display:flex; align-items:center; gap:28px;">
+      <a href="#top" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
+        <svg width="30" height="30" viewBox="0 0 32 32" style="filter:drop-shadow(0 1px 1px rgba(0,0,0,.3));"><use href="#snake"></use></svg>
+        <span style="font-size:20px; font-weight:700; color:#3a7a34; letter-spacing:-.01em; text-shadow:0 1px 0 #fff;">Snakie</span>
+      </a>
+      <div class="nav-links" style="margin-left:18px; display:flex; gap:24px; font-family:'Space Grotesk',sans-serif; font-size:13.5px; font-weight:500; color:#4a4d54;">
+        <a href="#features" class="nav-link" style="color:#4a4d54; text-decoration:none;">Features</a>
+        <a href="#board" class="nav-link" style="color:#4a4d54; text-decoration:none;">Board View</a>
+        <a href="#instruments" class="nav-link" style="color:#4a4d54; text-decoration:none;">Instruments</a>
+        <a href="#install" class="nav-link" style="color:#4a4d54; text-decoration:none;">Install</a>
+      </div>
+      <div style="margin-left:auto; display:flex; align-items:center; gap:16px;">
+        <a href="https://github.com/kevinmcaleer/Snakie" target="_blank" rel="noopener" class="gh-link" style="font-family:'Space Grotesk',sans-serif; font-size:13.5px; font-weight:600; color:#4a4d54; text-decoration:none;">GitHub ↗</a>
+        <a href="https://github.com/kevinmcaleer/Snakie/releases/latest" target="_blank" rel="noopener" class="btn-green" style="display:inline-flex; align-items:center; gap:8px; padding:9px 18px; border-radius:20px; background:linear-gradient(180deg,#8fe49a,#34ad4f 52%,#218c39); border:1px solid #1c7a34; box-shadow:inset 0 1px 0 rgba(255,255,255,.75),inset 0 -2px 4px rgba(0,0,0,.2),0 2px 4px rgba(0,0,0,.25); color:#fff; font-family:'Space Grotesk',sans-serif; font-size:13.5px; font-weight:700; text-shadow:0 -1px 0 rgba(0,0,0,.3); text-decoration:none;">
+          <svg width="15" height="15" style="display:block"><use href="#ic-download"></use></svg> Download
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <a id="top"></a>
+  <header style="background:radial-gradient(130% 90% at 50% -20%, #f4f2ec 0%, #e7e5df 58%); padding:78px 0 60px;">
+    <div style="max-width:1180px; margin:0 auto; padding:0 32px;">
+      <div style="display:inline-flex; align-items:center; gap:9px; padding:6px 13px; border-radius:20px; background:linear-gradient(180deg,#fbfbfd,#dfe3ea); border:1px solid #c4c8d1; box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(0,0,0,.1); font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; letter-spacing:.08em; color:#6c707a;">
+        <span style="width:8px; height:8px; border-radius:50%; background:radial-gradient(circle at 30% 30%,#9dffb6,#15a64a); box-shadow:0 0 5px rgba(60,210,110,.8);"></span>
+        MICROPYTHON IDE · v0.13.0
+      </div>
+      <h1 class="hero-h1" style="font-family:'Space Grotesk',sans-serif; font-size:58px; line-height:1.04; font-weight:700; letter-spacing:-.02em; color:#211f1a; margin:26px 0 0; max-width:880px; text-wrap:balance;">
+        The MicroPython IDE that looks as good as it works.
+      </h1>
+      <p style="font-size:19px; line-height:1.6; color:#5e584f; max-width:660px; margin:22px 0 0;">
+        Snakie is a clean, cross-platform editor for writing MicroPython and working with connected boards — wrapped in a photoreal interface of brushed metal, green felt, ruled paper and recessed glass. Editor, REPL, live Board View and on-screen instruments, in one window.
+      </p>
+
+      <div style="display:flex; align-items:center; gap:18px; margin-top:34px; flex-wrap:wrap;">
+        <a href="https://github.com/kevinmcaleer/Snakie/releases/latest" target="_blank" rel="noopener" class="btn-green" style="display:inline-flex; align-items:center; gap:10px; padding:15px 30px; border-radius:26px; background:linear-gradient(180deg,#8fe49a,#34ad4f 52%,#218c39); border:1px solid #1c7a34; box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 -3px 6px rgba(0,0,0,.22),0 3px 7px rgba(0,0,0,.28); color:#fff; font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; text-shadow:0 -1px 0 rgba(0,0,0,.3); text-decoration:none;">
+          <svg width="18" height="18" style="display:block"><use href="#ic-download"></use></svg> Download Snakie
+        </a>
+        <div style="display:inline-flex; align-items:stretch; border-radius:12px; overflow:hidden; border:1px solid #9498a1; box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(0,0,0,.2); background:linear-gradient(180deg,#fbfbfd,#cdd1d8); font-family:'Space Grotesk',sans-serif;">
+          <a href="https://github.com/kevinmcaleer/Snakie/releases/latest" target="_blank" rel="noopener" class="os-pick" style="padding:10px 18px; display:flex; flex-direction:column; align-items:center; gap:1px; color:#3a3d44; text-decoration:none;"><span style="font-size:13px; font-weight:600;">macOS</span><span style="font-size:10.5px; color:#7a7e86; font-family:'IBM Plex Mono',monospace;">.dmg</span></a>
+          <span style="width:1px; background:#9498a1; box-shadow:1px 0 0 #fff;"></span>
+          <a href="https://github.com/kevinmcaleer/Snakie/releases/latest" target="_blank" rel="noopener" class="os-pick" style="padding:10px 18px; display:flex; flex-direction:column; align-items:center; gap:1px; color:#3a3d44; text-decoration:none;"><span style="font-size:13px; font-weight:600;">Windows</span><span style="font-size:10.5px; color:#7a7e86; font-family:'IBM Plex Mono',monospace;">.exe</span></a>
+          <span style="width:1px; background:#9498a1; box-shadow:1px 0 0 #fff;"></span>
+          <a href="https://github.com/kevinmcaleer/Snakie/releases/latest" target="_blank" rel="noopener" class="os-pick" style="padding:10px 18px; display:flex; flex-direction:column; align-items:center; gap:1px; color:#3a3d44; text-decoration:none;"><span style="font-size:13px; font-weight:600;">Linux</span><span style="font-size:10.5px; color:#7a7e86; font-family:'IBM Plex Mono',monospace;">AppImage</span></a>
+        </div>
+      </div>
+      <div id="os-detect" style="margin-top:14px; font-size:13px; color:#8a847a; font-family:'IBM Plex Mono',monospace;"></div>
+
+      <!-- hero window -->
+      <div style="margin-top:52px; border-radius:15px; overflow:hidden; border:1px solid #b0b4bd; box-shadow:0 2px 4px rgba(0,0,0,.18),0 40px 80px -20px rgba(30,30,36,.4);">
+        <div style="height:40px; display:flex; align-items:center; padding:0 15px; background:linear-gradient(180deg,#f3f4f7,#cfd3da 60%,#bcc1ca); border-bottom:1px solid #8d9099; box-shadow:inset 0 1px 0 #fff;">
+          <div style="display:flex; gap:8px;">
+            <span style="width:12px; height:12px; border-radius:50%; background:radial-gradient(circle at 35% 30%,#ff8a7e,#e0463a); box-shadow:inset 0 0 0 .5px rgba(0,0,0,.15);"></span>
+            <span style="width:12px; height:12px; border-radius:50%; background:radial-gradient(circle at 35% 30%,#ffd98a,#e6ab30); box-shadow:inset 0 0 0 .5px rgba(0,0,0,.15);"></span>
+            <span style="width:12px; height:12px; border-radius:50%; background:radial-gradient(circle at 35% 30%,#9dffb6,#34ad4f); box-shadow:inset 0 0 0 .5px rgba(0,0,0,.15);"></span>
+          </div>
+          <div style="margin:0 auto; font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#5a5e66;">demo01.py — Snakie</div>
+        </div>
+        <img src="{{ '/assets/img/ide-editor.jpg' | relative_url }}" alt="Snakie running, showing the MicroPython editor with a docked plotter" style="display:block; width:100%; height:auto;">
+      </div>
+
+      <div style="margin-top:24px; display:flex; flex-wrap:wrap; gap:10px 26px; align-items:center; font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:500; color:#8a847a;">
+        <span>Runs on macOS · Windows · Linux</span>
+        <span style="width:4px; height:4px; border-radius:50%; background:#bdb8ad;"></span>
+        <span>Built on Electron</span>
+        <span style="width:4px; height:4px; border-radius:50%; background:#bdb8ad;"></span>
+        <span>Self-updating</span>
+        <span style="width:4px; height:4px; border-radius:50%; background:#bdb8ad;"></span>
+        <span>Free &amp; open source</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section id="features" style="padding:84px 0;">
+    <div style="max-width:1180px; margin:0 auto; padding:0 32px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#9a948a;">What's inside</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:36px; font-weight:700; letter-spacing:-.015em; color:#211f1a; margin:12px 0 0; max-width:620px;">Everything you need for one board — and nothing you don't.</h2>
+
+      <div class="grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:46px;">
+
+        <div style="padding:26px; border-radius:16px; background:linear-gradient(180deg,#fdfdff,#e3e7ee); border:1px solid #c0c4cd; box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(0,0,0,.1),0 16px 32px -14px rgba(40,40,46,.2);">
+          <div style="width:48px; height:48px; border-radius:13px; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 50% 30%,#9ff0a8,#34ad4f 56%,#1c8c3a); border:1px solid #1c7a34; box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 -3px 5px rgba(0,0,0,.2),0 1px 2px rgba(0,0,0,.25); color:#0d3a1b;"><svg width="24" height="24"><use href="#ic-edit"></use></svg></div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:700; color:#26241f; margin:18px 0 0;">A real code editor</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:#6c665d; margin:9px 0 0;">Monaco — the same engine as VS Code — with MicroPython syntax highlighting, autocomplete and optional AI ghost-text suggestions. Tabs, search &amp; replace, JSON/YAML validation.</p>
+        </div>
+
+        <div style="padding:26px; border-radius:16px; background:linear-gradient(180deg,#fdfdff,#e3e7ee); border:1px solid #c0c4cd; box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(0,0,0,.1),0 16px 32px -14px rgba(40,40,46,.2);">
+          <div style="width:48px; height:48px; border-radius:13px; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 50% 30%,#ffe08a,#e6ab30 58%,#c4881d); border:1px solid #9a6b1e; box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -3px 5px rgba(120,75,10,.4),0 1px 2px rgba(0,0,0,.25); color:#4a3209;"><svg width="24" height="24"><use href="#ic-terminal"></use></svg></div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:700; color:#26241f; margin:18px 0 0;">REPL over serial</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:#6c665d; margin:9px 0 0;">Connect to a board over USB with raw-REPL. Run code, stop it, and drop into a live interactive console. Browse and edit both your local and on-device filesystem, Thonny-style.</p>
+        </div>
+
+        <div style="padding:26px; border-radius:16px; background:linear-gradient(180deg,#fdfdff,#e3e7ee); border:1px solid #c0c4cd; box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(0,0,0,.1),0 16px 32px -14px rgba(40,40,46,.2);">
+          <div style="width:48px; height:48px; border-radius:13px; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 50% 30%,#9ff0a8,#34ad4f 56%,#1c8c3a); border:1px solid #1c7a34; box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 -3px 5px rgba(0,0,0,.2),0 1px 2px rgba(0,0,0,.25); color:#0d3a1b;"><svg width="24" height="24"><use href="#ic-chip"></use></svg></div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:700; color:#26241f; margin:18px 0 0;">Live Board View</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:#6c665d; margin:9px 0 0;">Snakie parses your code to draw the actual pinout — wiring each variable to the pin it uses. Multi-board, custom boards, a Board Creator, viewport controls and SVG export.</p>
+        </div>
+
+        <div style="padding:26px; border-radius:16px; background:linear-gradient(180deg,#fdfdff,#e3e7ee); border:1px solid #c0c4cd; box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(0,0,0,.1),0 16px 32px -14px rgba(40,40,46,.2);">
+          <div style="width:48px; height:48px; border-radius:13px; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 50% 30%,#ffe08a,#e6ab30 58%,#c4881d); border:1px solid #9a6b1e; box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -3px 5px rgba(120,75,10,.4),0 1px 2px rgba(0,0,0,.25); color:#4a3209;"><svg width="24" height="24"><use href="#ic-scope"></use></svg></div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:700; color:#26241f; margin:18px 0 0;">On-screen instruments</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:#6c665d; margin:9px 0 0;">A skeuomorphic oscilloscope, multimeter and plotter — dockable or floating — fed live and non-invasively by a tiny MicroPython telemetry library you install to your board in one click.</p>
+        </div>
+
+        <div style="padding:26px; border-radius:16px; background:linear-gradient(180deg,#fdfdff,#e3e7ee); border:1px solid #c0c4cd; box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(0,0,0,.1),0 16px 32px -14px rgba(40,40,46,.2);">
+          <div style="width:48px; height:48px; border-radius:13px; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 50% 30%,#9ff0a8,#34ad4f 56%,#1c8c3a); border:1px solid #1c7a34; box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 -3px 5px rgba(0,0,0,.2),0 1px 2px rgba(0,0,0,.25); color:#0d3a1b;"><svg width="22" height="22"><use href="#ic-git"></use></svg></div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:700; color:#26241f; margin:18px 0 0;">Built-in Git</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:#6c665d; margin:9px 0 0;">VS Code-style source control, built in. Stage, diff and commit; switch branches; track history — all without leaving the editor or reaching for the terminal.</p>
+        </div>
+
+        <div style="padding:26px; border-radius:16px; background:linear-gradient(180deg,#fdfdff,#e3e7ee); border:1px solid #c0c4cd; box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(0,0,0,.1),0 16px 32px -14px rgba(40,40,46,.2);">
+          <div style="width:48px; height:48px; border-radius:13px; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 50% 30%,#ffe08a,#e6ab30 58%,#c4881d); border:1px solid #9a6b1e; box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -3px 5px rgba(120,75,10,.4),0 1px 2px rgba(0,0,0,.25); color:#4a3209;"><svg width="22" height="22"><use href="#ic-bolt"></use></svg></div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:700; color:#26241f; margin:18px 0 0;">Flash &amp; install</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:#6c665d; margin:9px 0 0;">Flash MicroPython firmware to your board and install packages with mip — straight from the IDE. And because it's built on Electron, Snakie keeps itself up to date.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BOARD VIEW SHOWCASE ===================== -->
+  <section id="board" style="padding:30px 0 84px;">
+    <div style="max-width:1180px; margin:0 auto; padding:0 32px;">
+      <div class="grid-2-board" style="display:grid; grid-template-columns:1fr 1.35fr; gap:54px; align-items:center;">
+        <div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#9a948a;">Board View</div>
+          <h2 style="font-family:'Space Grotesk',sans-serif; font-size:34px; font-weight:700; letter-spacing:-.015em; color:#211f1a; margin:12px 0 0; line-height:1.1;">It reads your code and draws the board.</h2>
+          <p style="font-size:16px; line-height:1.65; color:#5e584f; margin:18px 0 0;">Every <code style="font-family:'IBM Plex Mono',monospace; font-size:14px; background:#dcd8cf; padding:1px 6px; border-radius:4px; color:#3a3d44;">Pin()</code>, <code style="font-family:'IBM Plex Mono',monospace; font-size:14px; background:#dcd8cf; padding:1px 6px; border-radius:4px; color:#3a3d44;">I2C()</code>, <code style="font-family:'IBM Plex Mono',monospace; font-size:14px; background:#dcd8cf; padding:1px 6px; border-radius:4px; color:#3a3d44;">PWM()</code> and <code style="font-family:'IBM Plex Mono',monospace; font-size:14px; background:#dcd8cf; padding:1px 6px; border-radius:4px; color:#3a3d44;">ADC()</code> in your program is traced to the physical pin it drives, colour-coded by type and listed below the board.</p>
+          <ul style="list-style:none; padding:0; margin:24px 0 0; display:flex; flex-direction:column; gap:13px;">
+            <li style="display:flex; gap:11px; align-items:flex-start; font-size:15px; color:#4a4640;"><span style="flex:none; margin-top:1px; width:20px; height:20px; border-radius:50%; background:radial-gradient(circle at 50% 30%,#9ff0a8,#34ad4f); display:flex; align-items:center; justify-content:center; color:#fff;"><svg width="13" height="13"><use href="#ic-check"></use></svg></span>Multiple boards &amp; custom board definitions</li>
+            <li style="display:flex; gap:11px; align-items:flex-start; font-size:15px; color:#4a4640;"><span style="flex:none; margin-top:1px; width:20px; height:20px; border-radius:50%; background:radial-gradient(circle at 50% 30%,#9ff0a8,#34ad4f); display:flex; align-items:center; justify-content:center; color:#fff;"><svg width="13" height="13"><use href="#ic-check"></use></svg></span>A Board Creator for boards Snakie doesn't know yet</li>
+            <li style="display:flex; gap:11px; align-items:flex-start; font-size:15px; color:#4a4640;"><span style="flex:none; margin-top:1px; width:20px; height:20px; border-radius:50%; background:radial-gradient(circle at 50% 30%,#9ff0a8,#34ad4f); display:flex; align-items:center; justify-content:center; color:#fff;"><svg width="13" height="13"><use href="#ic-check"></use></svg></span>Pan, zoom and export the diagram as SVG</li>
+          </ul>
+        </div>
+        <div style="border-radius:15px; overflow:hidden; border:1px solid #2a2c31; box-shadow:0 2px 4px rgba(0,0,0,.22),0 40px 80px -22px rgba(20,20,24,.5);">
+          <div style="height:38px; display:flex; align-items:center; padding:0 15px; background:linear-gradient(180deg,#3a3d43,#222429); border-bottom:1px solid #15171b;">
+            <div style="display:flex; gap:8px;"><span style="width:11px; height:11px; border-radius:50%; background:#e0463a;"></span><span style="width:11px; height:11px; border-radius:50%; background:#e6ab30;"></span><span style="width:11px; height:11px; border-radius:50%; background:#34ad4f;"></span></div>
+            <div style="margin:0 auto; font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#9aa0a8;">board_view_test.py — Snakie</div>
+          </div>
+          <img src="{{ '/assets/img/board-view.jpg' | relative_url }}" alt="Snakie Board View" style="display:block; width:100%; height:auto;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INSTRUMENTS ===================== -->
+  <section id="instruments" style="background:#2f5d44; background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px); background-size:3px 3px; border-top:3px solid #1c3b2a; border-bottom:3px solid #1c3b2a; padding:84px 0;">
+    <div style="max-width:1180px; margin:0 auto; padding:0 32px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#a9ceb8;">Instruments</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:36px; font-weight:700; letter-spacing:-.015em; color:#f3efe2; margin:12px 0 0; max-width:680px; line-height:1.1; text-shadow:0 1px 1px rgba(0,0,0,.3);">Turn your program into a bench of instruments.</h2>
+      <p style="font-size:16.5px; line-height:1.6; color:#cfe0d4; max-width:640px; margin:16px 0 0;">A handful of calls in your MicroPython code stream live values straight to Snakie's on-screen oscilloscope, multimeter and plotter — no probes, no extra hardware.</p>
+
+      <div class="grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:46px;">
+        <div>
+          <div style="border-radius:13px; overflow:hidden; border:1px solid #14271d; box-shadow:0 18px 36px -16px rgba(0,0,0,.6);">
+            <div style="height:32px; display:flex; align-items:center; gap:7px; padding:0 12px; background:linear-gradient(180deg,#3a3d43,#222429);"><span style="width:9px; height:9px; border-radius:50%; background:#e0463a;"></span><span style="width:9px; height:9px; border-radius:50%; background:#e6ab30;"></span><span style="width:9px; height:9px; border-radius:50%; background:#34ad4f;"></span></div>
+            <img src="{{ '/assets/img/scope.jpg' | relative_url }}" alt="Snakie oscilloscope" style="display:block; width:100%; height:auto;">
+          </div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; color:#f3efe2; margin:16px 0 0;">Oscilloscope</div>
+          <p style="font-size:13.5px; line-height:1.55; color:#bcd2c3; margin:5px 0 0;">A green-phosphor DSO with time/div and trigger controls, graphing a channel in real time.</p>
+        </div>
+        <div>
+          <div style="border-radius:13px; overflow:hidden; border:1px solid #14271d; box-shadow:0 18px 36px -16px rgba(0,0,0,.6);">
+            <div style="height:32px; display:flex; align-items:center; gap:7px; padding:0 12px; background:linear-gradient(180deg,#3a3d43,#222429);"><span style="width:9px; height:9px; border-radius:50%; background:#e0463a;"></span><span style="width:9px; height:9px; border-radius:50%; background:#e6ab30;"></span><span style="width:9px; height:9px; border-radius:50%; background:#34ad4f;"></span></div>
+            <img src="{{ '/assets/img/multimeter.jpg' | relative_url }}" alt="Snakie multimeter" style="display:block; width:100%; height:auto;">
+          </div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; color:#f3efe2; margin:16px 0 0;">Multimeter</div>
+          <p style="font-size:13.5px; line-height:1.55; color:#bcd2c3; margin:5px 0 0;">A handheld DMM reading any ADC pin as a live value, with bargraph and min / max / average.</p>
+        </div>
+        <div>
+          <div style="border-radius:13px; overflow:hidden; border:1px solid #14271d; box-shadow:0 18px 36px -16px rgba(0,0,0,.6);">
+            <div style="height:32px; display:flex; align-items:center; gap:7px; padding:0 12px; background:linear-gradient(180deg,#3a3d43,#222429);"><span style="width:9px; height:9px; border-radius:50%; background:#e0463a;"></span><span style="width:9px; height:9px; border-radius:50%; background:#e6ab30;"></span><span style="width:9px; height:9px; border-radius:50%; background:#34ad4f;"></span></div>
+            <img src="{{ '/assets/img/plotter.jpg' | relative_url }}" alt="Snakie plotter" style="display:block; width:100%; height:auto;">
+          </div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; color:#f3efe2; margin:16px 0 0;">Plotter</div>
+          <p style="font-size:13.5px; line-height:1.55; color:#bcd2c3; margin:5px 0 0;">A strip-chart recorder that graphs any values you <code style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#b9ddc4;">print()</code> over time, with auto-scroll.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:42px; max-width:560px; border-radius:12px; background:#080a07; border:1px solid #000; box-shadow:inset 0 3px 12px rgba(0,0,0,.7),0 1px 0 rgba(255,255,255,.12); padding:20px 22px; font-family:'IBM Plex Mono',monospace; font-size:14px; line-height:1.85; color:#5dff8a;">
+        <div style="color:#6f8f78;"># stream live values to Snakie's instruments</div>
+        <div><span style="color:#5dff8a;">scope</span>(adc.read_u16())<span style="color:#6f8f78;">   # → Oscilloscope</span></div>
+        <div><span style="color:#5dff8a;">meter</span>(voltage)<span style="color:#6f8f78;">         # → Multimeter</span></div>
+        <div><span style="color:#5dff8a;">plot</span>(temp, light)<span style="color:#6f8f78;">      # → Plotter</span></div>
+      </div>
+      <div style="margin-top:14px; font-size:13.5px; color:#a9ceb8;">The telemetry library installs to your board in one click.</div>
+    </div>
+  </section>
+
+  <!-- ===================== INSTALL ===================== -->
+  <section id="install" style="padding:84px 0;">
+    <div style="max-width:1180px; margin:0 auto; padding:0 32px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#9a948a;">Download &amp; install</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:36px; font-weight:700; letter-spacing:-.015em; color:#211f1a; margin:12px 0 0;">Up and running in a couple of minutes.</h2>
+      <p style="font-size:16px; line-height:1.6; color:#5e584f; max-width:620px; margin:14px 0 0;">Grab the latest signed installer for your platform from the GitHub Releases page, then follow the steps below.</p>
+
+      <div class="grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:42px;">
+
+        <!-- macOS -->
+        <div style="border-radius:16px; background:linear-gradient(180deg,#fdfdff,#e3e7ee); border:1px solid #c0c4cd; box-shadow:inset 0 1px 0 #fff,0 16px 34px -16px rgba(40,40,46,.22); padding:26px; display:flex; flex-direction:column;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:700; color:#26241f;">macOS</span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#7a7e86; background:#dcd8cf; padding:2px 7px; border-radius:5px;">signed + notarized</span>
+          </div>
+          <ol style="list-style:none; counter-reset:s; padding:0; margin:20px 0 0; display:flex; flex-direction:column; gap:14px; flex:1;">
+            <li style="counter-increment:s; display:flex; gap:12px; font-size:14px; line-height:1.5; color:#4a4640;"><span style="flex:none; width:22px; height:22px; border-radius:7px; background:#e6ab30; color:#3a2806; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; display:flex; align-items:center; justify-content:center;">1</span><span>Download the <strong>.dmg</strong> from Releases.</span></li>
+            <li style="counter-increment:s; display:flex; gap:12px; font-size:14px; line-height:1.5; color:#4a4640;"><span style="flex:none; width:22px; height:22px; border-radius:7px; background:#e6ab30; color:#3a2806; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; display:flex; align-items:center; justify-content:center;">2</span><span>Open it and drag <strong>Snakie</strong> into Applications.</span></li>
+            <li style="counter-increment:s; display:flex; gap:12px; font-size:14px; line-height:1.5; color:#4a4640;"><span style="flex:none; width:22px; height:22px; border-radius:7px; background:#e6ab30; color:#3a2806; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; display:flex; align-items:center; justify-content:center;">3</span><span>Launch it from Applications or Spotlight.</span></li>
+          </ol>
+          <a href="https://github.com/kevinmcaleer/Snakie/releases/latest" target="_blank" rel="noopener" class="btn-green" style="margin-top:22px; display:flex; align-items:center; justify-content:center; gap:8px; padding:11px; border-radius:11px; background:linear-gradient(180deg,#8fe49a,#34ad4f 52%,#218c39); border:1px solid #1c7a34; box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 1px 2px rgba(0,0,0,.2); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; text-shadow:0 -1px 0 rgba(0,0,0,.3); text-decoration:none;"><svg width="15" height="15"><use href="#ic-download"></use></svg> Download .dmg</a>
+        </div>
+
+        <!-- Windows -->
+        <div style="border-radius:16px; background:linear-gradient(180deg,#fdfdff,#e3e7ee); border:1px solid #c0c4cd; box-shadow:inset 0 1px 0 #fff,0 16px 34px -16px rgba(40,40,46,.22); padding:26px; display:flex; flex-direction:column;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:700; color:#26241f;">Windows</span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#7a7e86; background:#dcd8cf; padding:2px 7px; border-radius:5px;">x64</span>
+          </div>
+          <ol style="list-style:none; padding:0; margin:20px 0 0; display:flex; flex-direction:column; gap:14px; flex:1;">
+            <li style="display:flex; gap:12px; font-size:14px; line-height:1.5; color:#4a4640;"><span style="flex:none; width:22px; height:22px; border-radius:7px; background:#e6ab30; color:#3a2806; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; display:flex; align-items:center; justify-content:center;">1</span><span>Download the <strong>.exe</strong> installer from Releases.</span></li>
+            <li style="display:flex; gap:12px; font-size:14px; line-height:1.5; color:#4a4640;"><span style="flex:none; width:22px; height:22px; border-radius:7px; background:#e6ab30; color:#3a2806; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; display:flex; align-items:center; justify-content:center;">2</span><span>Run it — Snakie installs and adds a Start-menu shortcut.</span></li>
+            <li style="display:flex; gap:12px; font-size:14px; line-height:1.5; color:#4a4640;"><span style="flex:none; width:22px; height:22px; border-radius:7px; background:#e6ab30; color:#3a2806; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; display:flex; align-items:center; justify-content:center;">3</span><span>Open Snakie and connect your board.</span></li>
+          </ol>
+          <a href="https://github.com/kevinmcaleer/Snakie/releases/latest" target="_blank" rel="noopener" class="btn-green" style="margin-top:22px; display:flex; align-items:center; justify-content:center; gap:8px; padding:11px; border-radius:11px; background:linear-gradient(180deg,#8fe49a,#34ad4f 52%,#218c39); border:1px solid #1c7a34; box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 1px 2px rgba(0,0,0,.2); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; text-shadow:0 -1px 0 rgba(0,0,0,.3); text-decoration:none;"><svg width="15" height="15"><use href="#ic-download"></use></svg> Download .exe</a>
+        </div>
+
+        <!-- Linux -->
+        <div style="border-radius:16px; background:linear-gradient(180deg,#fdfdff,#e3e7ee); border:1px solid #c0c4cd; box-shadow:inset 0 1px 0 #fff,0 16px 34px -16px rgba(40,40,46,.22); padding:26px; display:flex; flex-direction:column;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:700; color:#26241f;">Linux</span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#7a7e86; background:#dcd8cf; padding:2px 7px; border-radius:5px;">x64</span>
+          </div>
+          <ol style="list-style:none; padding:0; margin:20px 0 0; display:flex; flex-direction:column; gap:14px; flex:1;">
+            <li style="display:flex; gap:12px; font-size:14px; line-height:1.5; color:#4a4640;"><span style="flex:none; width:22px; height:22px; border-radius:7px; background:#e6ab30; color:#3a2806; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; display:flex; align-items:center; justify-content:center;">1</span><span>Download the <strong>AppImage</strong> from Releases.</span></li>
+            <li style="display:flex; gap:12px; font-size:14px; line-height:1.5; color:#4a4640;"><span style="flex:none; width:22px; height:22px; border-radius:7px; background:#e6ab30; color:#3a2806; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; display:flex; align-items:center; justify-content:center;">2</span><span>Make it executable: <code style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; background:#dcd8cf; padding:1px 5px; border-radius:4px; color:#3a3d44;">chmod +x</code></span></li>
+            <li style="display:flex; gap:12px; font-size:14px; line-height:1.5; color:#4a4640;"><span style="flex:none; width:22px; height:22px; border-radius:7px; background:#e6ab30; color:#3a2806; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; display:flex; align-items:center; justify-content:center;">3</span><span>Double-click or run it from a terminal.</span></li>
+          </ol>
+          <a href="https://github.com/kevinmcaleer/Snakie/releases/latest" target="_blank" rel="noopener" class="btn-green" style="margin-top:22px; display:flex; align-items:center; justify-content:center; gap:8px; padding:11px; border-radius:11px; background:linear-gradient(180deg,#8fe49a,#34ad4f 52%,#218c39); border:1px solid #1c7a34; box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 1px 2px rgba(0,0,0,.2); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; text-shadow:0 -1px 0 rgba(0,0,0,.3); text-decoration:none;"><svg width="15" height="15"><use href="#ic-download"></use></svg> Download AppImage</a>
+        </div>
+      </div>
+
+      <div style="margin-top:22px; display:flex; gap:11px; align-items:flex-start; padding:14px 18px; border-radius:11px; background:#f3ecd9; border:1px solid #e0d6b8; font-size:13.5px; line-height:1.55; color:#7a6a3e;">
+        <svg width="18" height="18" style="flex:none; margin-top:1px; color:#c08a1e;"><use href="#ic-bolt"></use></svg>
+        <span>Windows and Linux builds are <strong>x64 only</strong> for now — Linux arm64 (Raspberry Pi) and Windows arm64 aren't built yet. On those, build from source below.</span>
+      </div>
+
+      <!-- build from source -->
+      <div class="grid-2-build" style="margin-top:42px; display:grid; grid-template-columns:1fr 1.25fr; gap:40px; align-items:center;">
+        <div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; color:#211f1a; margin:0;">Prefer to build it yourself?</h3>
+          <p style="font-size:15px; line-height:1.6; color:#5e584f; margin:12px 0 0;">Snakie is open source and built with electron-vite. Clone the repo, install the dependencies and you're running a hot-reloading dev build. <code style="font-family:'IBM Plex Mono',monospace; font-size:13px; background:#dcd8cf; padding:1px 6px; border-radius:4px; color:#3a3d44;">npm run dist</code> packages an installer for your OS.</p>
+        </div>
+        <div style="border-radius:13px; background:#080a07; border:1px solid #000; box-shadow:inset 0 3px 12px rgba(0,0,0,.7),0 14px 30px -14px rgba(0,0,0,.4); overflow:hidden;">
+          <div style="height:34px; display:flex; align-items:center; justify-content:space-between; padding:0 14px; background:linear-gradient(180deg,#222429,#16181c); border-bottom:1px solid #000;">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8e96;">terminal</span>
+            <button id="copy-btn" type="button" class="copy-btn" style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:600; color:#9aa0a8; background:#2b2d33; border:1px solid #3a3d44; border-radius:7px; padding:4px 11px; cursor:pointer;">Copy</button>
+          </div>
+          <div style="padding:18px 20px; font-family:'IBM Plex Mono',monospace; font-size:13.5px; line-height:1.9; color:#5dff8a;">
+            <div><span style="color:#e6ab30;">$</span> git clone https://github.com/kevinmcaleer/Snakie</div>
+            <div><span style="color:#e6ab30;">$</span> cd Snakie</div>
+            <div><span style="color:#e6ab30;">$</span> npm install</div>
+            <div><span style="color:#e6ab30;">$</span> npm run dev<span style="color:#6f8f78;">     # hot-reload dev app</span></div>
+            <div><span style="color:#e6ab30;">$</span> npm run dist<span style="color:#6f8f78;">    # build an installer</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section style="padding:10px 0 90px;">
+    <div style="max-width:1180px; margin:0 auto; padding:0 32px;">
+      <div style="border-radius:18px; padding:54px 48px; text-align:center; background:linear-gradient(180deg,#f3f4f7,#cfd3da 60%,#bcc1ca); border:1px solid #8d9099; box-shadow:inset 0 1px 0 #fff,0 20px 44px -18px rgba(40,40,46,.3);">
+        <svg width="46" height="46" viewBox="0 0 32 32" style="filter:drop-shadow(0 1px 1px rgba(0,0,0,.3));"><use href="#snake"></use></svg>
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:32px; font-weight:700; letter-spacing:-.015em; color:#26241f; margin:14px 0 0; text-shadow:0 1px 0 #fff;">Give your MicroPython a nicer home.</h2>
+        <p style="font-size:16px; color:#5a5e66; margin:12px auto 0; max-width:480px;">Free, open source, and self-updating on macOS, Windows and Linux.</p>
+        <a href="https://github.com/kevinmcaleer/Snakie/releases/latest" target="_blank" rel="noopener" class="btn-green" style="margin-top:28px; display:inline-flex; align-items:center; gap:10px; padding:15px 32px; border-radius:26px; background:linear-gradient(180deg,#8fe49a,#34ad4f 52%,#218c39); border:1px solid #1c7a34; box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 -3px 6px rgba(0,0,0,.22),0 3px 7px rgba(0,0,0,.28); color:#fff; font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; text-shadow:0 -1px 0 rgba(0,0,0,.3); text-decoration:none;"><svg width="18" height="18"><use href="#ic-download"></use></svg> Download Snakie</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer style="background:#2f5d44; background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px); background-size:3px 3px; border-top:3px solid #1c3b2a; padding:54px 0 34px; color:#dceae1;">
+    <div class="footer-grid" style="max-width:1180px; margin:0 auto; padding:0 32px; display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:40px;">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <svg width="28" height="28" viewBox="0 0 32 32"><use href="#snake"></use></svg>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:700; color:#f3efe2; text-shadow:0 1px 1px rgba(0,0,0,.35);">Snakie</span>
+        </div>
+        <p style="font-size:13.5px; line-height:1.6; color:#aecbb8; margin:14px 0 0; max-width:280px;">A modern, cross-platform MicroPython editor with a photoreal skeuomorphic interface. Built by Kevin McAleer.</p>
+      </div>
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#8fb09c;">Product</div>
+        <div style="display:flex; flex-direction:column; gap:9px; margin-top:14px; font-size:14px;">
+          <a href="https://github.com/kevinmcaleer/Snakie/releases/latest" target="_blank" rel="noopener" class="foot-link" style="color:#dceae1; text-decoration:none;">Download</a>
+          <a href="https://github.com/kevinmcaleer/Snakie/blob/main/CHANGELOG.md" target="_blank" rel="noopener" class="foot-link" style="color:#dceae1; text-decoration:none;">Changelog</a>
+          <a href="https://github.com/kevinmcaleer/Snakie/tree/main/docs" target="_blank" rel="noopener" class="foot-link" style="color:#dceae1; text-decoration:none;">Docs</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#8fb09c;">Source</div>
+        <div style="display:flex; flex-direction:column; gap:9px; margin-top:14px; font-size:14px;">
+          <a href="https://github.com/kevinmcaleer/Snakie" target="_blank" rel="noopener" class="foot-link" style="color:#dceae1; text-decoration:none;">GitHub</a>
+          <a href="https://github.com/kevinmcaleer/Snakie/releases" target="_blank" rel="noopener" class="foot-link" style="color:#dceae1; text-decoration:none;">Releases</a>
+          <a href="https://github.com/kevinmcaleer/Snakie/issues" target="_blank" rel="noopener" class="foot-link" style="color:#dceae1; text-decoration:none;">Issues</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#8fb09c;">Community</div>
+        <div style="display:flex; flex-direction:column; gap:9px; margin-top:14px; font-size:14px;">
+          <a href="https://www.kevsrobots.com/discord" target="_blank" rel="noopener" class="foot-link" style="color:#dceae1; text-decoration:none;">Discord</a>
+          <a href="https://www.kevsrobots.com" target="_blank" rel="noopener" class="foot-link" style="color:#dceae1; text-decoration:none;">kevsrobots.com</a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1180px; margin:38px auto 0; padding:18px 32px 0; border-top:1px solid rgba(255,255,255,.12); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:12.5px; color:#9cbcaa; font-family:'IBM Plex Mono',monospace;">
+      <span>Snakie · free &amp; open source · v0.13.0</span>
+      <span>Not affiliated with the MicroPython or Raspberry Pi projects.</span>
+    </div>
+  </footer>
+
+</div>
