@@ -1,0 +1,17 @@
+/* Snakie docs — custom styling. */
+
+/* Screenshot placeholders (#189). Until a real screenshot replaces them, these
+   admonitions stand out as a dashed amber box so they read clearly as TODOs and
+   are easy to find. The screenshot agent swaps each for a {figure} directive. */
+.admonition.screenshot {
+  border: 2px dashed #e6ab30;
+  background: rgba(230, 171, 48, 0.07);
+}
+.admonition.screenshot > .admonition-title {
+  background: rgba(230, 171, 48, 0.16);
+  color: #8a6a17;
+}
+.admonition.screenshot > .admonition-title::before {
+  content: "\1F4F7";  /* 📷 */
+  margin-right: 0.4rem;
+}
