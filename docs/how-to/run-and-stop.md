@@ -32,12 +32,12 @@ silently. (The background device layer — live pin values, file transfers — u
 the machine-friendly raw-REPL protocol; see
 [Architecture](../explanation/architecture).)
 
-:::{admonition} Screenshot needed — `run-and-stop-run-button`
-:class: screenshot
-What to capture: The top toolbar with the green ▶ Run button and the red Stop /
-Reset button, with a connected board, and the Shell console below showing live
-program output.
-:::
+```{figure} /_static/screenshots/run-and-stop-run-button.png
+:alt: The top toolbar with the green ▶ Run button and the red Stop / Reset button, with a connected board, and the Shell co…
+:width: 100%
+
+The top toolbar with the green ▶ Run button and the red Stop / Reset button, with a connected board, and the Shell console below showing live program output.
+```
 
 ### When Run is disabled
 

@@ -80,11 +80,12 @@ Open the board selector (the board-name dropdown in the Board View title bar) an
 choose your board. Snakie rebuilds the board list from your installed libraries,
 so your new board appears alongside the built-ins.
 
-:::{admonition} Screenshot needed — `add-board-definition-board-picker`
-:class: screenshot
-What to capture: the Board View title-bar board selector dropdown open, showing a
-user-authored board listed among the built-in boards.
-:::
+```{figure} /_static/screenshots/add-board-definition-board-picker.png
+:alt: the Board View title-bar board selector dropdown open, showing a user-authored board listed among the built-in boards.
+:width: 100%
+
+the Board View title-bar board selector dropdown open, showing a user-authored board listed among the built-in boards.
+```
 
 ```{tip}
 If you don't see it immediately, close and re-open the Board View — the picker

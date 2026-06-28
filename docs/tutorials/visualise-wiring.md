@@ -114,10 +114,12 @@ For the example above you'll see four nodes: `led` (gold OUT) wired to the LED,
 `button` (blue IN) on GP14, `buzzer` (orange PWM) on GP15, and `display` (cyan
 I²C) wired to **two** pads — GP0 and GP1, labelled **SDA** and **SCL**.
 
-:::{admonition} Screenshot needed — `visualise-wiring-node-graph`
-:class: screenshot
-What to capture: the Board View node-graph showing the four example nodes (led/button/buzzer/display) with coloured noodle wires reaching the Pico pads, including the I2C bus reaching two pads.
-:::
+```{figure} /_static/screenshots/visualise-wiring-node-graph.png
+:alt: the Board View node-graph showing the four example nodes (led/button/buzzer/display) with coloured noodle wires reach…
+:width: 100%
+
+the Board View node-graph showing the four example nodes (led/button/buzzer/display) with coloured noodle wires reaching the Pico pads, including the I2C bus reaching two pads.
+```
 
 ```{tip}
 The view is **live**. Leave it open, go back to your editor, and add another line —
@@ -145,10 +147,12 @@ matters.
 The whole pinout redraws and every wire re-targets the new board's pads. Your
 choice is remembered, and the mini preview in the main editor follows along.
 
-:::{admonition} Screenshot needed — `visualise-wiring-board-picker`
-:class: screenshot
-What to capture: the Board View board picker dropdown open in the title bar, listing the built-in boards with one highlighted.
-:::
+```{figure} /_static/screenshots/visualise-wiring-board-picker.png
+:alt: the Board View board picker dropdown open in the title bar, listing the built-in boards with one highlighted.
+:width: 100%
+
+the Board View board picker dropdown open in the title bar, listing the built-in boards with one highlighted.
+```
 
 ```{note}
 Don't see your exact board? You can add one. See

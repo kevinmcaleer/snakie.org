@@ -40,12 +40,12 @@ Console and press <kbd>Ctrl</kbd>+<kbd>C</kbd>, or use the toolbar **Stop**
 button. See [Run & stop](run-and-stop).
 ```
 
-:::{admonition} Screenshot needed — `repl-and-plotter-console`
-:class: screenshot
-What to capture: The Shell region with the Console view active, showing the `>>>`
-prompt and a couple of evaluated expressions, plus the Console/Problems toggle and
-the connection control in the header.
-:::
+```{figure} /_static/screenshots/repl-and-plotter-console.png
+:alt: The Shell region with the Console view active, showing the `>>>` prompt and a couple of evaluated expressions, plus t…
+:width: 100%
+
+The Shell region with the Console view active, showing the `>>>` prompt and a couple of evaluated expressions, plus the Console/Problems toggle and the connection control in the header.
+```
 
 ## Clear the console and scroll back
 

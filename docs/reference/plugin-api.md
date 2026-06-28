@@ -336,8 +336,9 @@ start from it.
 | `lint_demo` | `@plugin.linter` with `diagnostic` + `fix` (trailing whitespace and `# TODO` rules). |
 | `python_linter` | A real reactive linter wrapping ruff / pyflakes. |
 
-:::{admonition} Screenshot needed — `plugin-api-plugins-view`
-:class: screenshot
-What to capture: the Plugins activity-bar view listing the discovered plugins
-and their commands with Run buttons, and the Reload action.
-:::
+```{figure} /_static/screenshots/plugin-api-plugins-view.png
+:alt: the Plugins activity-bar view listing the discovered plugins and their commands with Run buttons, and the Reload acti…
+:width: 100%
+
+the Plugins activity-bar view listing the discovered plugins and their commands with Run buttons, and the Reload action.
+```

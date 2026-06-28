@@ -53,10 +53,12 @@ Copilot is marked **experimental** — it can only be verified against a real
 Copilot account, so behaviour may vary.
 ```
 
-:::{admonition} Screenshot needed — `ai-assist-chat-settings`
-:class: screenshot
-What to capture: The Settings dialog open on the Chat tab, showing the Provider dropdown, the API key field with Save key / Remove / Get a key buttons, and the Autocomplete toggle below.
-:::
+```{figure} /_static/screenshots/ai-assist-chat-settings.png
+:alt: The Settings dialog open on the Chat tab, showing the Provider dropdown, the API key field with Save key / Remove / G…
+:width: 100%
+
+The Settings dialog open on the Chat tab, showing the Provider dropdown, the API key field with Save key / Remove / Get a key buttons, and the Autocomplete toggle below.
+```
 
 ## Chat with the assistant
 

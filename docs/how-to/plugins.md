@@ -12,10 +12,12 @@ and the [Plugin API reference](../reference/plugin-api).
 Click the **puzzle-piece** icon in the activity bar. The panel is styled as a
 "module rack": each discovered plugin is a faceplate seated on mounting rails.
 
-:::{admonition} Screenshot needed — `plugins-rack-overview`
-:class: screenshot
-What to capture: The Plugins panel open in the activity bar, showing the "PLUGIN RACK" header and at least one MOUNTED module (lit green LED) such as the bundled Hello plugin.
-:::
+```{figure} /_static/screenshots/plugins-rack-overview.png
+:alt: The Plugins panel open in the activity bar, showing the "PLUGIN RACK" header and at least one MOUNTED module (lit gre…
+:width: 100%
+
+The Plugins panel open in the activity bar, showing the "PLUGIN RACK" header and at least one MOUNTED module (lit green LED) such as the bundled Hello plugin.
+```
 
 The rack splits plugins into two groups:
 

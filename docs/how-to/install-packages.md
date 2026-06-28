@@ -21,10 +21,12 @@ Click the **Packages** icon in the activity bar. The view has two tabs:
 
 This page covers the **Packages** tab.
 
-:::{admonition} Screenshot needed — `install-packages-panel`
-:class: screenshot
-What to capture: The Packages view with the Packages tab active, showing the flash-usage meter under the header, the search box, and the manila-tag REGISTRY list of curated libraries.
-:::
+```{figure} /_static/screenshots/install-packages-panel.png
+:alt: The Packages view with the Packages tab active, showing the flash-usage meter under the header, the search box, and t…
+:width: 100%
+
+The Packages view with the Packages tab active, showing the flash-usage meter under the header, the search box, and the manila-tag REGISTRY list of curated libraries.
+```
 
 ## Install a library by name
 

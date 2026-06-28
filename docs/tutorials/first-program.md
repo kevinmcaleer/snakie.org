@@ -33,10 +33,12 @@ The editor sits in the centre of the window. When nothing is open it shows
 A new tab called `untitled-1.py` appears and the editor is ready for typing. The
 tab shows a small dot while it has unsaved changes.
 
-:::{admonition} Screenshot needed — `first-program-new-tab`
-:class: screenshot
-What to capture: The centre editor with a fresh `untitled-1.py` tab open and the cursor in an empty buffer, the New file button visible in the top toolbar.
-:::
+```{figure} /_static/screenshots/first-program-new-tab.png
+:alt: The centre editor with a fresh `untitled-1.py` tab open and the cursor in an empty buffer, the New file button visibl…
+:width: 100%
+
+The centre editor with a fresh `untitled-1.py` tab open and the cursor in an empty buffer, the New file button visible in the top toolbar.
+```
 
 ## 2. Type your program
 

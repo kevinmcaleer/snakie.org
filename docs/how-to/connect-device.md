@@ -19,10 +19,12 @@ pieces:
 | **Refresh button** (`⟳`) | Re-scans for ports. Shown only while disconnected. |
 | **Connect / Disconnect button** | Opens or closes the connection. Its label and colour follow the live state. |
 
-:::{admonition} Screenshot needed — `connect-device-shell-header`
-:class: screenshot
-What to capture: The Shell panel header showing the port dropdown (with at least one device listed), the refresh button, and the green Connect button, all disconnected.
-:::
+```{figure} /_static/screenshots/connect-device-shell-header.png
+:alt: The Shell panel header showing the port dropdown (with at least one device listed), the refresh button, and the green…
+:width: 100%
+
+The Shell panel header showing the port dropdown (with at least one device listed), the refresh button, and the green Connect button, all disconnected.
+```
 
 ## Connect
 

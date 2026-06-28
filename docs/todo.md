@@ -1,8 +1,8 @@
 # Screenshots to capture
 
-Auto-generated checklist of every screenshot placeholder in the docs (73 across 32 pages). Each corresponds to a `:::{admonition} Screenshot needed` block on the page listed.
+51 screenshot placeholders remain across 26 pages (22 are already captured into `_static/screenshots/` and wired as figures).
 
-**For the screenshot agent:** capture each shot, save it to `_static/screenshots/<slug>.png`, then replace that page’s placeholder admonition with a `{figure}` directive pointing at it. Tick each off as done.
+Each remaining item is a `:::{admonition} Screenshot needed` block — most need a connected board (connect/REPL/live values/instruments/flashing) or a wired project. Capture into `_static/screenshots/<slug>.png` and replace the admonition with a `{figure}` (see `scripts/capture-screenshots.mjs` for the no-hardware capture harness).
 
 ## `explanation/architecture.md`
 
@@ -11,24 +11,15 @@ Auto-generated checklist of every screenshot placeholder in the docs (73 across 
 ## `how-to/add-board-definition.md`
 
 - [ ] **`add-board-definition-family-checkbox`** — the Part Editor's Details panel with Family set to "Microcontroller" and the "This part is a microcontroller board" checkbox ticked.
-- [ ] **`add-board-definition-board-picker`** — the Board View title-bar board selector dropdown open, showing a user-authored board listed among the built-in boards.
 - [ ] **`add-board-definition-boards-folder-button`** — the Board View title bar with the 📁 boards-folder button and the pencil/create button visible.
 
 ## `how-to/ai-assist.md`
 
-- [ ] **`ai-assist-chat-settings`** — The Settings dialog open on the Chat tab, showing the Provider dropdown, the API key field with Save key / Remove / Get a key buttons, and the Autocomplete toggle below.
 - [ ] **`ai-assist-chat-panel`** — The Chat panel open with a short conversation, an assistant reply containing a code block with its Apply and Copy buttons, the two context toggles above the composer, and the Provider/Model footer dropdowns.
 - [ ] **`ai-assist-ghost-text`** — The Monaco editor mid-edit showing a dimmed ghost-text inline completion suggested after the cursor in a Python file.
 
-## `how-to/board-view.md`
-
-- [ ] **`board-view-window`** — The Board View open as its own OS window beside the main editor, showing the styled title bar (drag grip, BOARD VIEW label, view tabs, board picker, MCU chip) above the board drawing.
-- [ ] **`board-view-tabs`** — Close-up of the title-bar tabs (Node graph / Breadboard / Schematic) with one selected, alongside the board picker dropdown and the MCU chip badge.
-- [ ] **`board-view-controls`** — The node-graph canvas with the floating control cluster visible (zoom −, the 100%/fit toggle, +, fit, rotate, and the export button with its format dropdown).
-
 ## `how-to/connect-device.md`
 
-- [ ] **`connect-device-shell-header`** — The Shell panel header showing the port dropdown (with at least one device listed), the refresh button, and the green Connect button, all disconnected.
 - [ ] **`connect-device-status-bar`** — The bottom status bar showing a green "Connected · /dev/cu.usbmodem1101" indicator on the left.
 
 ## `how-to/device-instruments.md`
@@ -41,10 +32,6 @@ Auto-generated checklist of every screenshot placeholder in the docs (73 across 
 
 - [ ] **`export-bom-pinouts-export-menu`** — The Board View zoom toolbar with the Export menu open, showing the PNG / SVG / PDF items, the separator, and the "BOM (Markdown)" and "Pinouts (Markdown)" items.
 
-## `how-to/find-replace.md`
-
-- [ ] **`find-replace-window`** — the floating Find & Replace window open above the editor, with a query typed in the Find box and the live match count line showing "3 of 12 matches".
-
 ## `how-to/flash-firmware.md`
 
 - [ ] **`flash-firmware-dialog`** — The Flash MicroPython firmware modal open with the "Download from MicroPython.org" source selected, showing the Family → Model → Variant → Version dropdowns.
@@ -53,7 +40,6 @@ Auto-generated checklist of every screenshot placeholder in the docs (73 across 
 
 ## `how-to/install-packages.md`
 
-- [ ] **`install-packages-panel`** — The Packages view with the Packages tab active, showing the flash-usage meter under the header, the search box, and the manila-tag REGISTRY list of curated libraries.
 - [ ] **`install-packages-installed-stamp`** — A package tag after a successful install, showing the green INSTALLED stamp and the INSTALLED group at the top of the list, with the flash meter updated.
 
 ## `how-to/install-part-drivers.md`
@@ -67,24 +53,12 @@ Auto-generated checklist of every screenshot placeholder in the docs (73 across 
 
 ## `how-to/plugins.md`
 
-- [ ] **`plugins-rack-overview`** — The Plugins panel open in the activity bar, showing the "PLUGIN RACK" header and at least one MOUNTED module (lit green LED) such as the bundled Hello plugin.
 - [ ] **`plugins-no-python`** — The Plugins panel "Python not found" state showing the install prompt and the `pip install snakie` code line.
 - [ ] **`plugins-run-command`** — An expanded mounted module (e.g. Hello) showing its commands with RUN buttons and a resulting info notice in the panel's output area.
 
 ## `how-to/repl-and-plotter.md`
 
-- [ ] **`repl-and-plotter-console`** — The Shell region with the Console view active, showing the `>>>` prompt and a couple of evaluated expressions, plus the Console/Problems toggle and the connection control in the header.
 - [ ] **`repl-and-plotter-plotter`** — The Plotter in the instrument dock graphing two live traces, with the on-screen legend, the `N samples · M Hz` readout, and the metal CLEAR key visible.
-
-## `how-to/run-and-stop.md`
-
-- [ ] **`run-and-stop-run-button`** — The top toolbar with the green ▶ Run button and the red Stop / Reset button, with a connected board, and the Shell console below showing live program output.
-
-## `how-to/settings-and-themes.md`
-
-- [ ] **`settings-and-themes-theme-knob`** — The toolbar with the sun/moon theme knob highlighted, shown once in the light Skeuomorph skin and once in the dark skin.
-- [ ] **`settings-and-themes-editor-tab`** — The Settings dialog open on the Editor tab, showing the Notebook paper segmented control, the Line spacing slider, the Editor theme selector, and the firmware-updates checkbox.
-- [ ] **`settings-and-themes-chat-tab`** — The Settings dialog open on the Chat tab, showing the Provider dropdown, the API key field with Save/Remove/Get a key buttons, and the Autocomplete toggle.
 
 ## `how-to/update-snakie.md`
 
@@ -105,12 +79,7 @@ Auto-generated checklist of every screenshot placeholder in the docs (73 across 
 
 ## `how-to/version-control.md`
 
-- [ ] **`version-control-panel-overview`** — The Source Control panel open on a repo with changes, showing the branch toolbar at top, the commit message box, and the Staged / Changes / Untracked groups populated.
 - [ ] **`version-control-diff-view`** — The inline unified diff open for a modified file, showing green added lines and red removed lines with the file path in the diff header.
-
-## `reference/boards-and-firmware.md`
-
-- [ ] **`boards-and-firmware-board-selector`** — The Board View selector dropdown expanded, listing all five built-in boards (Pico 2 W, Pico Plus 2, Tiny 2040, Tiny 2350, ESP32 DevKit) with the Pico 2 W rendered behind it.
 
 ## `reference/parts-yml.md`
 
@@ -119,7 +88,6 @@ Auto-generated checklist of every screenshot placeholder in the docs (73 across 
 ## `reference/plugin-api.md`
 
 - [ ] **`plugin-api-linter-squiggle`** — the editor showing a plugin-produced squiggle (e.g. the lint_demo "Trailing whitespace" warning) with its lightbulb quick-fix menu open.
-- [ ] **`plugin-api-plugins-view`** — the Plugins activity-bar view listing the discovered plugins and their commands with Run buttons, and the Reload action.
 
 ## `reference/robot-yml.md`
 
@@ -128,11 +96,6 @@ Auto-generated checklist of every screenshot placeholder in the docs (73 across 
 ## `reference/telemetry-api.md`
 
 - [ ] **`telemetry-api-instruments-live`** — The Oscilloscope, Multimeter and Plotter windows updating live from a running program that calls `inst.scope`/`inst.meter`/`inst.plot`, with no LIVE toggle enabled.
-
-## `reference/ui-overview.md`
-
-- [ ] **`ui-overview-full-window`** — The full Snakie main window in the Skeuomorph theme with a Python file open, the Files sidebar showing, the Shell console at the bottom, and the status bar visible — annotated regions optional.
-- [ ] **`ui-overview-board-window`** — The separate Board View window in node-graph mode showing a parsed board with connection nodes, sitting alongside the main Snakie window.
 
 ## `tutorials/author-a-part.md`
 
@@ -149,7 +112,6 @@ Auto-generated checklist of every screenshot placeholder in the docs (73 across 
 
 ## `tutorials/first-program.md`
 
-- [ ] **`first-program-new-tab`** — The centre editor with a fresh `untitled-1.py` tab open and the cursor in an empty buffer, the New file button visible in the top toolbar.
 - [ ] **`first-program-run-button`** — The top toolbar with the green Run button and the red Stop/Reset button, with a device shown as connected.
 - [ ] **`first-program-shell-output`** — The bottom Shell panel on its Console view showing several "blink N" lines printed by the running program.
 - [ ] **`first-program-plotter`** — The instrument dock Plotter showing two smooth scrolling sine/cosine traces with the "series 1 / series 2" legend and the samples/Hz readout.
@@ -169,6 +131,4 @@ Auto-generated checklist of every screenshot placeholder in the docs (73 across 
 ## `tutorials/visualise-wiring.md`
 
 - [ ] **`visualise-wiring-open-button`** — the main editor's mini board preview panel with the cursor over its "Open the full Board Viewer" diagonal-arrow button.
-- [ ] **`visualise-wiring-node-graph`** — the Board View node-graph showing the four example nodes (led/button/buzzer/display) with coloured noodle wires reaching the Pico pads, including the I2C bus reaching two pads.
-- [ ] **`visualise-wiring-board-picker`** — the Board View board picker dropdown open in the title bar, listing the built-in boards with one highlighted.
 - [ ] **`visualise-wiring-live-values`** — the node-graph with LIVE toggled on (green LED lit) and live pin values shown on the node cards for a connected board.

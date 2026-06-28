@@ -29,10 +29,12 @@ run `git init` in a terminal (or clone an existing repo), then click **Re-check*
 in the panel.
 ```
 
-:::{admonition} Screenshot needed — `version-control-panel-overview`
-:class: screenshot
-What to capture: The Source Control panel open on a repo with changes, showing the branch toolbar at top, the commit message box, and the Staged / Changes / Untracked groups populated.
-:::
+```{figure} /_static/screenshots/version-control-panel-overview.png
+:alt: The Source Control panel open on a repo with changes, showing the branch toolbar at top, the commit message box, and …
+:width: 100%
+
+The Source Control panel open on a repo with changes, showing the branch toolbar at top, the commit message box, and the Staged / Changes / Untracked groups populated.
+```
 
 ## Read the status at a glance
 

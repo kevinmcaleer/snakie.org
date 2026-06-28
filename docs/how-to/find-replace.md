@@ -26,10 +26,12 @@ The window has a standard OS title bar and appears in your operating system's
 stay on top of the main editor while open.
 ```
 
-:::{admonition} Screenshot needed — `find-replace-window`
-:class: screenshot
-What to capture: the floating Find & Replace window open above the editor, with a query typed in the Find box and the live match count line showing "3 of 12 matches".
-:::
+```{figure} /_static/screenshots/find-replace-window.png
+:alt: the floating Find & Replace window open above the editor, with a query typed in the Find box and the live match count…
+:width: 100%
+
+the floating Find & Replace window open above the editor, with a query typed in the Find box and the live match count line showing "3 of 12 matches".
+```
 
 ## Find text
 

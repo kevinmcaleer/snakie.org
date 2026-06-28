@@ -30,10 +30,12 @@ editor renders its own cohesive dark paper, so the per-theme **Editor theme**
 colours below only apply while the light Skeuomorph skin is active.
 ```
 
-:::{admonition} Screenshot needed — `settings-and-themes-theme-knob`
-:class: screenshot
-What to capture: The toolbar with the sun/moon theme knob highlighted, shown once in the light Skeuomorph skin and once in the dark skin.
-:::
+```{figure} /_static/screenshots/settings-and-themes-theme-knob.png
+:alt: The toolbar with the sun/moon theme knob highlighted, shown once in the light Skeuomorph skin and once in the dark sk…
+:width: 100%
+
+The toolbar with the sun/moon theme knob highlighted, shown once in the light Skeuomorph skin and once in the dark skin.
+```
 
 ## Open the Settings dialog
 
@@ -92,10 +94,12 @@ enabled, Snakie checks whether a newer MicroPython is available for the connecte
 device and prompts you from the Flash-firmware button. See
 [Flash firmware](flash-firmware) for the flashing workflow.
 
-:::{admonition} Screenshot needed — `settings-and-themes-editor-tab`
-:class: screenshot
-What to capture: The Settings dialog open on the Editor tab, showing the Notebook paper segmented control, the Line spacing slider, the Editor theme selector, and the firmware-updates checkbox.
-:::
+```{figure} /_static/screenshots/settings-and-themes-editor-tab.png
+:alt: The Settings dialog open on the Editor tab, showing the Notebook paper segmented control, the Line spacing slider, th…
+:width: 100%
+
+The Settings dialog open on the Editor tab, showing the Notebook paper segmented control, the Line spacing slider, the Editor theme selector, and the firmware-updates checkbox.
+```
 
 (settings-and-themes-chat-tab)=
 ## Chat settings tab
@@ -145,10 +149,12 @@ Autocomplete is **off by default** — it spends tokens on every typing pause.
 When it's enabled, a **Completion model** dropdown appears so you can pick which
 model produces the suggestions for the selected provider.
 
-:::{admonition} Screenshot needed — `settings-and-themes-chat-tab`
-:class: screenshot
-What to capture: The Settings dialog open on the Chat tab, showing the Provider dropdown, the API key field with Save/Remove/Get a key buttons, and the Autocomplete toggle.
-:::
+```{figure} /_static/screenshots/settings-and-themes-chat-tab.png
+:alt: The Settings dialog open on the Chat tab, showing the Provider dropdown, the API key field with Save/Remove/Get a key…
+:width: 100%
+
+The Settings dialog open on the Chat tab, showing the Provider dropdown, the API key field with Save/Remove/Get a key buttons, and the Autocomplete toggle.
+```
 
 ## Related pages
 

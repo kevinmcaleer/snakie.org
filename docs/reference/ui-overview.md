@@ -11,10 +11,12 @@ chat · instrument dock), and the **status bar**. Three regions also exist as
 separate windows: the **Board View**, **Find & Replace**, and floating
 **instruments**.
 
-:::{admonition} Screenshot needed — `ui-overview-full-window`
-:class: screenshot
-What to capture: The full Snakie main window in the Skeuomorph theme with a Python file open, the Files sidebar showing, the Shell console at the bottom, and the status bar visible — annotated regions optional.
-:::
+```{figure} /_static/screenshots/ui-overview-full-window.png
+:alt: The full Snakie main window in the Skeuomorph theme with a Python file open, the Files sidebar showing, the Shell con…
+:width: 100%
+
+The full Snakie main window in the Skeuomorph theme with a Python file open, the Files sidebar showing, the Shell console at the bottom, and the status bar visible — annotated regions optional.
+```
 
 ## Top toolbar
 
@@ -267,10 +269,12 @@ Find & Replace
   = find next, Shift+Enter = previous, Esc = close. See
   [Find & Replace](../how-to/find-replace).
 
-:::{admonition} Screenshot needed — `ui-overview-board-window`
-:class: screenshot
-What to capture: The separate Board View window in node-graph mode showing a parsed board with connection nodes, sitting alongside the main Snakie window.
-:::
+```{figure} /_static/screenshots/ui-overview-board-window.png
+:alt: The separate Board View window in node-graph mode showing a parsed board with connection nodes, sitting alongside the…
+:width: 100%
+
+The separate Board View window in node-graph mode showing a parsed board with connection nodes, sitting alongside the main Snakie window.
+```
 
 ## Persistence
 

@@ -83,12 +83,12 @@ IO34, IO35, IO36 and IO39 are **input-only**. Many DevKitC clones wire an onboar
 LED to GPIO2 (the most common, hence the `2` LED token), but it varies by clone.
 ```
 
-:::{admonition} Screenshot needed — `boards-and-firmware-board-selector`
-:class: screenshot
-What to capture: The Board View selector dropdown expanded, listing all five
-built-in boards (Pico 2 W, Pico Plus 2, Tiny 2040, Tiny 2350, ESP32 DevKit) with
-the Pico 2 W rendered behind it.
-:::
+```{figure} /_static/screenshots/boards-and-firmware-board-selector.png
+:alt: The Board View selector dropdown expanded, listing all five built-in boards (Pico 2 W, Pico Plus 2, Tiny 2040, Tiny 2…
+:width: 100%
+
+The Board View selector dropdown expanded, listing all five built-in boards (Pico 2 W, Pico Plus 2, Tiny 2040, Tiny 2350, ESP32 DevKit) with the Pico 2 W rendered behind it.
+```
 
 ## Firmware catalog
 

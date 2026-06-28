@@ -24,10 +24,12 @@ You can open the Board View three ways:
 The window streams the active file live, so the drawing updates as you type. To
 close it, use the OS window controls or press <kbd>Esc</kbd>.
 
-:::{admonition} Screenshot needed — `board-view-window`
-:class: screenshot
-What to capture: The Board View open as its own OS window beside the main editor, showing the styled title bar (drag grip, BOARD VIEW label, view tabs, board picker, MCU chip) above the board drawing.
-:::
+```{figure} /_static/screenshots/board-view-window.png
+:alt: The Board View open as its own OS window beside the main editor, showing the styled title bar (drag grip, BOARD VIEW …
+:width: 100%
+
+The Board View open as its own OS window beside the main editor, showing the styled title bar (drag grip, BOARD VIEW label, view tabs, board picker, MCU chip) above the board drawing.
+```
 
 ```{note}
 The Board View is a standard OS window with native title-bar chrome
@@ -54,10 +56,12 @@ on the right and wire them up; see [Install part drivers](install-part-drivers)
 and [Export a BOM & pinouts](export-bom-pinouts) for what you can do with a wired
 project.
 
-:::{admonition} Screenshot needed — `board-view-tabs`
-:class: screenshot
-What to capture: Close-up of the title-bar tabs (Node graph / Breadboard / Schematic) with one selected, alongside the board picker dropdown and the MCU chip badge.
-:::
+```{figure} /_static/screenshots/board-view-tabs.png
+:alt: Close-up of the title-bar tabs (Node graph / Breadboard / Schematic) with one selected, alongside the board picker dr…
+:width: 100%
+
+Close-up of the title-bar tabs (Node graph / Breadboard / Schematic) with one selected, alongside the board picker dropdown and the MCU chip badge.
+```
 
 ## Pick a board
 
@@ -100,10 +104,12 @@ board) always frames the whole pinout. Zoom ranges from 20% to 400%.
 The **Breadboard** and **Schematic** views have their own zoom toolbar with the
 same **−/+**, **fit**, and **rotate** controls for arranging your parts.
 
-:::{admonition} Screenshot needed — `board-view-controls`
-:class: screenshot
-What to capture: The node-graph canvas with the floating control cluster visible (zoom −, the 100%/fit toggle, +, fit, rotate, and the export button with its format dropdown).
-:::
+```{figure} /_static/screenshots/board-view-controls.png
+:alt: The node-graph canvas with the floating control cluster visible (zoom −, the 100%/fit toggle, +, fit, rotate, and the…
+:width: 100%
+
+The node-graph canvas with the floating control cluster visible (zoom −, the 100%/fit toggle, +, fit, rotate, and the export button with its format dropdown).
+```
 
 ## Export SVG, PNG, or PDF
 
