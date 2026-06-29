@@ -1,8 +1,8 @@
 # Screenshots to capture
 
-40 screenshot placeholders remain across 24 pages (33 are captured into `_static/screenshots/` and wired as figures).
+37 placeholders remain across 24 pages (36 captured + wired as figures).
 
-The remaining ones need specific peripherals (gamepad, ultrasonic, IMU, Wi-Fi/Bluetooth/I²C devices), a wired project (breadboard/part-editor), an available app/firmware update, AI configured, or a live plotter trace. The no-hardware and board-connected harnesses are in `scripts/`.
+Remaining shots need specific peripherals, a wired project (robot.yml), update/AI states, or fiddly in-canvas selection (e.g. the part-editor pin inspector). Harnesses live in `scripts/`.
 
 ## `explanation/architecture.md`
 
@@ -90,13 +90,10 @@ The remaining ones need specific peripherals (gamepad, ultrasonic, IMU, Wi-Fi/Bl
 
 ## `tutorials/author-a-part.md`
 
-- [ ] **`author-a-part-new-part-button`** — The Parts Library view with the "+ New part" button in its toolbar highlighted, before the editor opens.
 - [ ] **`author-a-part-pin-inspector`** — A pin selected on the breadboard canvas with the Inspector showing its Name, Type, GPIO, capabilities checkboxes and Pad shape selector.
-- [ ] **`author-a-part-layered-canvas`** — The Breadboard view with a board image, several placed pins, a mounting hole, and a shape/label, plus the Layers panel on the right showing the Components, Pins, Mounting holes, PCB and Image layers.
 
 ## `tutorials/build-a-robot.md`
 
-- [ ] **`build-a-robot-breadboard-empty`** — The Board View window on the **Breadboard** tab with a Raspberry Pi Pico 2 W selected and no parts placed yet, showing the three view-type tabs at top-left and the empty dark canvas.
 - [ ] **`build-a-robot-part-placed`** — The Breadboard canvas with the Pico on the left and a VL53L0X sensor placed to its right, the sensor selected so its rotate/rename/duplicate/delete mini-toolbar is visible, and the Library dock open on the right.
 - [ ] **`build-a-robot-wired-noodles`** — The Breadboard canvas with a red VIN→3V3 wire, a white GND→GND wire, and two coloured signal noodles (SDA→GP4, SCL→GP5) running between the sensor and the Pico.
 - [ ] **`build-a-robot-schematic`** — The Schematic tab showing the Pico as an IC block with power on top and a single GND at the bottom, the VL53L0X symbol, and orthogonal right-angle wires routed between them.

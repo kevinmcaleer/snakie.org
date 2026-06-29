@@ -40,10 +40,12 @@ A blank part opens in the editor, which fills the window. The **Saved to** selec
 in the title bar already points at **My Parts (your library)** — your personal
 library, which Snakie creates automatically the first time you save.
 
-:::{admonition} Screenshot needed — `author-a-part-new-part-button`
-:class: screenshot
-What to capture: The Parts Library view with the "+ New part" button in its toolbar highlighted, before the editor opens.
-:::
+```{figure} /_static/screenshots/author-a-part-new-part-button.png
+:alt: The Parts Library view with the "+ New part" button in its toolbar highlighted, before the editor opens.
+:width: 100%
+
+The Parts Library view with the "+ New part" button in its toolbar highlighted, before the editor opens.
+```
 
 The editor has two views, switched with the **Breadboard** / **Schematic** tabs in
 the title bar. You will do all the work in **Breadboard** (the default) — an
@@ -163,10 +165,12 @@ Turn on **grid** and **snap** from the view control at the bottom-right of the
 canvas to align everything to the part's pin-spacing grid (2.54 mm by default).
 ```
 
-:::{admonition} Screenshot needed — `author-a-part-layered-canvas`
-:class: screenshot
-What to capture: The Breadboard view with a board image, several placed pins, a mounting hole, and a shape/label, plus the Layers panel on the right showing the Components, Pins, Mounting holes, PCB and Image layers.
-:::
+```{figure} /_static/screenshots/author-a-part-layered-canvas.png
+:alt: The Breadboard view with a board image, several placed pins, a mounting hole, and a shape/label, plus the Layers pane…
+:width: 100%
+
+The Breadboard view with a board image, several placed pins, a mounting hole, and a shape/label, plus the Layers panel on the right showing the Components, Pins, Mounting holes, PCB and Image layers.
+```
 
 ## 8. Made a mistake? Undo it
 

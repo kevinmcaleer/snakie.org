@@ -58,10 +58,12 @@ also highlight the board pins your open `.py` file drives, so the pins your code
 uses and the parts you wire appear together.
 ```
 
-:::{admonition} Screenshot needed — `build-a-robot-breadboard-empty`
-:class: screenshot
-What to capture: The Board View window on the **Breadboard** tab with a Raspberry Pi Pico 2 W selected and no parts placed yet, showing the three view-type tabs at top-left and the empty dark canvas.
-:::
+```{figure} /_static/screenshots/build-a-robot-breadboard-empty.png
+:alt: The Board View window on the **Breadboard** tab with a Raspberry Pi Pico 2 W selected and no parts placed yet, showin…
+:width: 100%
+
+The Board View window on the **Breadboard** tab with a Raspberry Pi Pico 2 W selected and no parts placed yet, showing the three view-type tabs at top-left and the empty dark canvas.
+```
 
 ## 2. Open the parts library dock
 
