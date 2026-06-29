@@ -1,0 +1,33 @@
+name: Docs
+
+# Build the Sphinx documentation (docs/) on every change. Warnings are errors
+# (-W via the Makefile), so a broken cross-reference or orphaned page fails CI.
+# The built HTML is uploaded as an artifact; wire it to your hosting as desired.
+
+on:
+  push:
+    paths:
+      - "docs/**"
+      - ".github/workflows/docs.yml"
+  pull_request:
+    paths:
+      - "docs/**"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r docs/requirements.txt
+      - name: Build HTML
+        run: make -C docs html
+      - name: Upload site
+        uses: actions/upload-artifact@v4
+        with:
+          name: snakie-docs-html
+          path: docs/_build/html

@@ -19,3 +19,5 @@ exclude:
   - Gemfile.lock
   - README.md
   - .gitignore
+  # The Sphinx documentation source (built separately — see docs/README.md).
+  - docs
