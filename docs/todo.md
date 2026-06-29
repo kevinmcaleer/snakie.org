@@ -1,8 +1,8 @@
 # Screenshots to capture
 
-51 screenshot placeholders remain across 26 pages (22 are already captured into `_static/screenshots/` and wired as figures).
+40 screenshot placeholders remain across 24 pages (33 are captured into `_static/screenshots/` and wired as figures).
 
-Each remaining item is a `:::{admonition} Screenshot needed` block — most need a connected board (connect/REPL/live values/instruments/flashing) or a wired project. Capture into `_static/screenshots/<slug>.png` and replace the admonition with a `{figure}` (see `scripts/capture-screenshots.mjs` for the no-hardware capture harness).
+The remaining ones need specific peripherals (gamepad, ultrasonic, IMU, Wi-Fi/Bluetooth/I²C devices), a wired project (breadboard/part-editor), an available app/firmware update, AI configured, or a live plotter trace. The no-hardware and board-connected harnesses are in `scripts/`.
 
 ## `explanation/architecture.md`
 
@@ -18,13 +18,8 @@ Each remaining item is a `:::{admonition} Screenshot needed` block — most need
 - [ ] **`ai-assist-chat-panel`** — The Chat panel open with a short conversation, an assistant reply containing a code block with its Apply and Copy buttons, the two context toggles above the composer, and the Provider/Model footer dropdowns.
 - [ ] **`ai-assist-ghost-text`** — The Monaco editor mid-edit showing a dimmed ghost-text inline completion suggested after the cursor in a Python file.
 
-## `how-to/connect-device.md`
-
-- [ ] **`connect-device-status-bar`** — The bottom status bar showing a green "Connected · /dev/cu.usbmodem1101" indicator on the left.
-
 ## `how-to/device-instruments.md`
 
-- [ ] **`device-instruments-dock-header`** — The instrument dock with the INPUTS / OUTPUTS toggle rows, the ＋ Add palette open showing the searchable catalogue, and one in-use instrument carrying its accent dot.
 - [ ] **`device-instruments-gamepad`** — The Gamepad panel showing the virtual stick, the mapped-output bars, and the HOLD TO DRIVE + E-STOP safety buttons.
 - [ ] **`device-instruments-range-radar`** — The Range instrument in swept/RADAR mode showing the polar sweep with fading blips, plus the TRIG/ECHO pin selectors and the max-range / units / alert controls.
 
@@ -34,7 +29,6 @@ Each remaining item is a `:::{admonition} Screenshot needed` block — most need
 
 ## `how-to/flash-firmware.md`
 
-- [ ] **`flash-firmware-dialog`** — The Flash MicroPython firmware modal open with the "Download from MicroPython.org" source selected, showing the Family → Model → Variant → Version dropdowns.
 - [ ] **`flash-firmware-microbit-maintenance`** — The flasher with a micro:bit selected and the orange "maintenance mode" warning banner explaining to reconnect without holding reset.
 - [ ] **`flash-firmware-update-prompt`** — The status-bar popup reading "MicroPython vX.Y.Z is available (device runs v…)" with the Flash and dismiss (✕) buttons, anchored above the Flash firmware button.
 
@@ -48,7 +42,6 @@ Each remaining item is a `:::{admonition} Screenshot needed` block — most need
 
 ## `how-to/manage-files.md`
 
-- [ ] **`manage-files-panel-overview`** — The Files sidebar with the Local files tree (top) populated, the transfer bridge in the middle, and the Device files tree (bottom) showing a connected board's root.
 - [ ] **`manage-files-device-context-menu`** — Right-click context menu open on a file in the Device files tree, showing Open, Download to computer, Rename, and Delete.
 
 ## `how-to/plugins.md`
@@ -68,8 +61,6 @@ Each remaining item is a `:::{admonition} Screenshot needed` block — most need
 
 ## `how-to/use-instruments.md`
 
-- [ ] **`use-instruments-dock-open`** — the main window with the Instrument Dock open on the right, showing the mini board view, the INPUTS/OUTPUTS toggle rows with the `+ Add` button, and a docked Oscilloscope and Multimeter in the stack.
-- [ ] **`use-instruments-add-palette`** — the `+ Add instrument` palette open over the dock, with the search box at the top and the INPUTS/OUTPUTS grouped list of instruments (showing the "shown" and "in use" badges).
 - [ ] **`use-instruments-live-warning`** — the status bar at the bottom of the window showing the "Live polling is interrupting the board" warning with its Stop button, alongside the connected-device indicator.
 
 ## `how-to/validate-yaml-json.md`
@@ -112,15 +103,7 @@ Each remaining item is a `:::{admonition} Screenshot needed` block — most need
 
 ## `tutorials/first-program.md`
 
-- [ ] **`first-program-run-button`** — The top toolbar with the green Run button and the red Stop/Reset button, with a device shown as connected.
-- [ ] **`first-program-shell-output`** — The bottom Shell panel on its Console view showing several "blink N" lines printed by the running program.
 - [ ] **`first-program-plotter`** — The instrument dock Plotter showing two smooth scrolling sine/cosine traces with the "series 1 / series 2" legend and the samples/Hz readout.
-
-## `tutorials/getting-started.md`
-
-- [ ] **`getting-started-connection-control`** — The Shell panel header with the serial-port dropdown open showing a connected board, the ⟳ refresh button, and the Connect/Disconnect button.
-- [ ] **`getting-started-repl-banner`** — The Shell Console showing the MicroPython boot banner and the `>>>` REPL prompt just after connecting.
-- [ ] **`getting-started-run-blink`** — The editor with `blink.py` open and the toolbar's green Run button, with the Console showing the program running.
 
 ## `tutorials/live-instruments.md`
 

@@ -109,10 +109,12 @@ a file is **open**. Hover the button to see why it is greyed out ("Connect to a
 device to run" or "Open a file to run").
 ```
 
-:::{admonition} Screenshot needed — `first-program-run-button`
-:class: screenshot
-What to capture: The top toolbar with the green Run button and the red Stop/Reset button, with a device shown as connected.
-:::
+```{figure} /_static/screenshots/first-program-run-button.png
+:alt: The top toolbar with the green Run button and the red Stop/Reset button, with a device shown as connected.
+:width: 100%
+
+The top toolbar with the green Run button and the red Stop/Reset button, with a device shown as connected.
+```
 
 ## 5. Read the output in the Shell
 
@@ -136,10 +138,12 @@ A few things to know about the Shell:
 - If you cannot see the Shell, toggle it with the bottom-panel knob in the
   toolbar.
 
-:::{admonition} Screenshot needed — `first-program-shell-output`
-:class: screenshot
-What to capture: The bottom Shell panel on its Console view showing several "blink N" lines printed by the running program.
-:::
+```{figure} /_static/screenshots/first-program-shell-output.png
+:alt: The bottom Shell panel on its Console view showing several "blink N" lines printed by the running program.
+:width: 100%
+
+The bottom Shell panel on its Console view showing several "blink N" lines printed by the running program.
+```
 
 ## 6. Stop or reset the board
 

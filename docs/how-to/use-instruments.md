@@ -28,10 +28,12 @@ When open, the dock shows, top to bottom:
   **INPUTS** and **OUTPUTS** — plus a **`+ Add`** button,
 - the stack of currently-shown instrument windows.
 
-:::{admonition} Screenshot needed — `use-instruments-dock-open`
-:class: screenshot
-What to capture: the main window with the Instrument Dock open on the right, showing the mini board view, the INPUTS/OUTPUTS toggle rows with the `+ Add` button, and a docked Oscilloscope and Multimeter in the stack.
-:::
+```{figure} /_static/screenshots/use-instruments-dock-open.png
+:alt: the main window with the Instrument Dock open on the right, showing the mini board view, the INPUTS/OUTPUTS toggle ro…
+:width: 100%
+
+the main window with the Instrument Dock open on the right, showing the mini board view, the INPUTS/OUTPUTS toggle rows with the `+ Add` button, and a docked Oscilloscope and Multimeter in the stack.
+```
 
 ## Show or hide an instrument
 
@@ -52,10 +54,12 @@ box to filter by name or description, then click an entry to show it and close
 the palette. Entries already on screen read as **shown**; ones your file uses
 read as **in use**.
 
-:::{admonition} Screenshot needed — `use-instruments-add-palette`
-:class: screenshot
-What to capture: the `+ Add instrument` palette open over the dock, with the search box at the top and the INPUTS/OUTPUTS grouped list of instruments (showing the "shown" and "in use" badges).
-:::
+```{figure} /_static/screenshots/use-instruments-add-palette.png
+:alt: the `+ Add instrument` palette open over the dock, with the search box at the top and the INPUTS/OUTPUTS grouped list…
+:width: 100%
+
+the `+ Add instrument` palette open over the dock, with the search box at the top and the INPUTS/OUTPUTS grouped list of instruments (showing the "shown" and "in use" badges).
+```
 
 ## Open a scope or meter from the Board View
 

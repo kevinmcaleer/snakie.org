@@ -70,10 +70,12 @@ The status updates from the device layer itself, so every part of the UI (the
 Shell control and the status bar) stays in sync — connecting from one place
 updates them all.
 
-:::{admonition} Screenshot needed — `connect-device-status-bar`
-:class: screenshot
-What to capture: The bottom status bar showing a green "Connected · /dev/cu.usbmodem1101" indicator on the left.
-:::
+```{figure} /_static/screenshots/connect-device-status-bar.png
+:alt: The bottom status bar showing a green "Connected · /dev/cu.usbmodem1101" indicator on the left.
+:width: 100%
+
+The bottom status bar showing a green "Connected · /dev/cu.usbmodem1101" indicator on the left.
+```
 
 Once connected you can use the [REPL and Plotter](repl-and-plotter),
 [Run & stop](run-and-stop) your program, and [manage files](manage-files) on the

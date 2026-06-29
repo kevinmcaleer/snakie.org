@@ -32,10 +32,12 @@ imports a driver or uses a matching pin (e.g. an `MPU6050` import lights the IMU
 a `PWM` pin lights the Oscilloscope), that instrument gets an accent **in-use**
 dot and starts visible. Everything else is one click away in the palette.
 
-:::{admonition} Screenshot needed — `device-instruments-dock-header`
-:class: screenshot
-What to capture: The instrument dock with the INPUTS / OUTPUTS toggle rows, the ＋ Add palette open showing the searchable catalogue, and one in-use instrument carrying its accent dot.
-:::
+```{figure} /_static/screenshots/device-instruments-dock-header.png
+:alt: The instrument dock with the INPUTS / OUTPUTS toggle rows, the ＋ Add palette open showing the searchable catalogue, a…
+:width: 100%
+
+The instrument dock with the INPUTS / OUTPUTS toggle rows, the ＋ Add palette open showing the searchable catalogue, and one in-use instrument carrying its accent dot.
+```
 
 ### Dock, float, or hide a panel
 

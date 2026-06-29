@@ -9,10 +9,12 @@ This page assumes you can already [connect a device](connect-device). Drag the
 splitter between the two panes to give either tree more room; the split is
 remembered across sessions.
 
-:::{admonition} Screenshot needed — `manage-files-panel-overview`
-:class: screenshot
-What to capture: The Files sidebar with the Local files tree (top) populated, the transfer bridge in the middle, and the Device files tree (bottom) showing a connected board's root.
-:::
+```{figure} /_static/screenshots/manage-files-panel-overview.png
+:alt: The Files sidebar with the Local files tree (top) populated, the transfer bridge in the middle, and the Device files …
+:width: 100%
+
+The Files sidebar with the Local files tree (top) populated, the transfer bridge in the middle, and the Device files tree (bottom) showing a connected board's root.
+```
 
 ## Open a working folder
 

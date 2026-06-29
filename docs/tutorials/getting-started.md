@@ -90,12 +90,12 @@ The button changes to **Connecting…** and then to **Disconnect** once you are
 linked. At the same time, the **status bar** at the very bottom-left of the
 window switches from *Disconnected* to **Connected · `<your port>`**.
 
-:::{admonition} Screenshot needed — `getting-started-connection-control`
-:class: screenshot
-What to capture: The Shell panel header with the serial-port dropdown open
-showing a connected board, the ⟳ refresh button, and the Connect/Disconnect
-button.
-:::
+```{figure} /_static/screenshots/getting-started-connection-control.png
+:alt: The Shell panel header with the serial-port dropdown open showing a connected board, the ⟳ refresh button, and the Co…
+:width: 100%
+
+The Shell panel header with the serial-port dropdown open showing a connected board, the ⟳ refresh button, and the Connect/Disconnect button.
+```
 
 ## Step 4 — Confirm the REPL banner
 
@@ -112,11 +112,12 @@ Type "help()" for more information.
 
 Seeing the banner and the `>>>` prompt means Snakie is talking to your board.
 
-:::{admonition} Screenshot needed — `getting-started-repl-banner`
-:class: screenshot
-What to capture: The Shell Console showing the MicroPython boot banner and the
-`>>>` REPL prompt just after connecting.
-:::
+```{figure} /_static/screenshots/getting-started-repl-banner.png
+:alt: The Shell Console showing the MicroPython boot banner and the `>>>` REPL prompt just after connecting.
+:width: 100%
+
+The Shell Console showing the MicroPython boot banner and the `>>>` REPL prompt just after connecting.
+```
 
 ```{tip}
 The Console is a full interactive REPL — you can type Python at the `>>>` prompt
@@ -168,11 +169,12 @@ output streams into the Shell **Console**. Within a second your board's onboard
 LED should start blinking — on for a second, off for a second. **That is your
 first MicroPython program running from Snakie.** 🎉
 
-:::{admonition} Screenshot needed — `getting-started-run-blink`
-:class: screenshot
-What to capture: The editor with `blink.py` open and the toolbar's green Run
-button, with the Console showing the program running.
-:::
+```{figure} /_static/screenshots/getting-started-run-blink.png
+:alt: The editor with `blink.py` open and the toolbar's green Run button, with the Console showing the program running.
+:width: 100%
+
+The editor with `blink.py` open and the toolbar's green Run button, with the Console showing the program running.
+```
 
 ## Step 7 — Stop it
 

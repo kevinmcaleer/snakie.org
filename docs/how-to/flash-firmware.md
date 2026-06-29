@@ -18,10 +18,12 @@ connection and choosing a port for everyday coding, see
 Click **⚡ Flash firmware** at the far-right end of the status bar (bottom of the
 window). The **Flash MicroPython firmware** dialog opens.
 
-:::{admonition} Screenshot needed — `flash-firmware-dialog`
-:class: screenshot
-What to capture: The Flash MicroPython firmware modal open with the "Download from MicroPython.org" source selected, showing the Family → Model → Variant → Version dropdowns.
-:::
+```{figure} /_static/screenshots/flash-firmware-dialog.png
+:alt: The Flash MicroPython firmware modal open with the "Download from MicroPython.org" source selected, showing the Famil…
+:width: 100%
+
+The Flash MicroPython firmware modal open with the "Download from MicroPython.org" source selected, showing the Family → Model → Variant → Version dropdowns.
+```
 
 The dialog drives everything from two choices:
 
