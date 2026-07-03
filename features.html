@@ -66,8 +66,8 @@ permalink: /features/
         <div class="ft-card"><h3>Offline simulated device</h3><p>A real MicroPython interpreter compiled to WebAssembly — learn, prototype and demo with no hardware plugged in. The REPL and Run button actually execute Python.</p></div>
         <div class="ft-card"><h3>Node-graph Board View</h3><p>Snakie reads your code and draws the board, wiring every <code>Pin()</code>, <code>I2C()</code>, <code>PWM()</code> and <code>ADC()</code> to the physical pin it drives — no guesswork.</p></div>
         <div class="ft-card"><h3>Parts Library &amp; Part Editor</h3><p>A portable, community-authored parts library with a full visual editor for custom boards and components — pins, pads, shapes, text and images.</p></div>
-        <div class="ft-card"><h3>On-screen instruments</h3><p>A skeuomorphic oscilloscope, multimeter and plotter fed live and non-invasively by a tiny telemetry library — they never interrupt your running program.</p></div>
-        <div class="ft-card"><h3>Robotics instrument suite</h3><p>A 3D IMU viewer, distance radar, and button / LED / encoder / display panels — plus gamepad teleop for driving robots live.</p></div>
+        <div class="ft-card"><h3>On-screen instruments</h3><p>A skeuomorphic bench — oscilloscope, antique barometer, multimeter, plotter and more — fed live and non-invasively by a tiny telemetry library that never interrupts your running program. <code>watch()</code> a sensor and the right instrument opens itself.</p></div>
+        <div class="ft-card"><h3>Robotics instrument suite</h3><p>A 3D IMU viewer with a magnetometer compass, distance radar, and button / LED / encoder / display panels — plus gamepad teleop for driving robots live.</p></div>
         <div class="ft-card"><h3>Breadboard &amp; schematic views</h3><p>Two fully-wired circuit representations with life-like parts, auto-routed noodle wires and real pinouts.</p></div>
         <div class="ft-card"><h3>File syncing with the device</h3><p>Tick a file to keep it in sync with the connected board — Snakie pushes it on every save, so what's on the board always matches what you're editing.</p></div>
         <div class="ft-card"><h3>SAM text-to-speech</h3><p>Give your robot a voice from a single GPIO pin with the built-in SAM speech instrument — no complex audio libraries.</p></div>
@@ -130,12 +130,13 @@ permalink: /features/
       <div class="ft-theme">Editor &amp; files</div>
       <ul class="ft-list">
         <li><span class="dot"></span><span><b>Python code editor</b> — highlighting, indent guides and code folding.</span></li>
-        <li><span class="dot"></span><span><b>Local &amp; device file browsers</b> — create, rename, delete and organise files on both, Thonny-style.</span></li>
+        <li><span class="dot"></span><span><b>Device file management</b> — multi-select, drag files into folders, and delete right on the connected board.</span></li>
+        <li><span class="dot"></span><span><b>Local file browser</b> — create, rename, delete and organise files, Thonny-style.</span></li>
         <li><span class="dot"></span><span><b>Code outline</b> — navigate functions, classes and definitions.</span></li>
         <li><span class="dot"></span><span><b>Variables inspector</b> — watch locals during REPL sessions.</span></li>
         <li><span class="dot"></span><span><b>Code linting</b> — ruff (or pyflakes) with quick-fixes.</span></li>
         <li><span class="dot"></span><span><b>Problems panel</b> — one place for lint, syntax and config errors.</span></li>
-        <li><span class="dot"></span><span><b>MicroPython help</b> — built-in standard-library reference.</span></li>
+        <li><span class="dot"></span><span><b>Context-sensitive help</b> — right-click any keyword, type, built-in or library part for the reference article.</span></li>
       </ul>
 
       <div class="ft-theme">Device, REPL &amp; firmware</div>
@@ -154,16 +155,20 @@ permalink: /features/
       <div class="ft-theme">Instruments &amp; panels</div>
       <ul class="ft-list">
         <li><span class="dot"></span><span><b>Oscilloscope</b> — live PWM waveform with frequency &amp; duty.</span></li>
-        <li><span class="dot"></span><span><b>Multimeter</b> — voltage with min/max/avg on a 7-segment display.</span></li>
+        <li><span class="dot"></span><span><b>Multimeter &amp; potentiometer</b> — voltage min/max/avg, and a vintage ammeter dial.</span></li>
+        <li><span class="dot"></span><span><b>Barometer</b> — antique aneroid dial for temperature, pressure &amp; humidity (BME280).</span></li>
         <li><span class="dot"></span><span><b>Plotter</b> — multi-series graphing with auto-scaling and legend.</span></li>
         <li><span class="dot"></span><span><b>Range / radar</b> — distance gauge and polar sweep.</span></li>
-        <li><span class="dot"></span><span><b>IMU 3D viewer</b> — roll/pitch/yaw with a horizon.</span></li>
+        <li><span class="dot"></span><span><b>IMU 3D viewer &amp; compass</b> — roll/pitch/yaw with a horizon, plus a magnetometer heading.</span></li>
+        <li><span class="dot"></span><span><b>Auto-detected instruments</b> — <code>watch()</code> a sensor object and the right panel opens by itself.</span></li>
         <li><span class="dot"></span><span><b>Button &amp; LED panels</b> — monitor inputs, drive digital/PWM/RGB outputs.</span></li>
         <li><span class="dot"></span><span><b>NeoPixel control</b> — colour-pick WS2812 strips.</span></li>
         <li><span class="dot"></span><span><b>Encoder panel</b> — position dial, RPM and push-switch.</span></li>
         <li><span class="dot"></span><span><b>I²C display mirror</b> — view SSD1306/SH1106/HD44780 from the IDE.</span></li>
-        <li><span class="dot"></span><span><b>I²C, Wi-Fi &amp; Bluetooth scanners</b> — address grids and live device discovery.</span></li>
+        <li><span class="dot"></span><span><b>Interactive I²C scanner</b> — an animated sweep, then click a found address to identify it and add the matching part.</span></li>
+        <li><span class="dot"></span><span><b>Wi-Fi &amp; Bluetooth scanners</b> — live network and device discovery.</span></li>
         <li><span class="dot"></span><span><b>Buzzer &amp; melody sequencer</b> — RTTTL playback and a drag-to-compose staff.</span></li>
+        <li><span class="dot"></span><span><b>Pop-out instruments</b> — undock any panel into its own resizable OS window.</span></li>
       </ul>
 
       <div class="ft-theme">Board View, parts &amp; wiring</div>
@@ -171,15 +176,17 @@ permalink: /features/
         <li><span class="dot"></span><span><b>Mini &amp; main Board View</b> — just-your-pins preview and the full pinout.</span></li>
         <li><span class="dot"></span><span><b>Many built-in boards</b> — Pico, Pico 2 W, ESP32, Pimoroni Pico Plus 2, Tiny 2040 &amp; Tiny 2350.</span></li>
         <li><span class="dot"></span><span><b>Custom board definitions</b> — add your own boards.</span></li>
-        <li><span class="dot"></span><span><b>Breadboard &amp; schematic views</b> — life-like wiring and auto-routed schematics.</span></li>
+        <li><span class="dot"></span><span><b>Breadboard, schematic &amp; node-graph views</b> — life-like wiring, named I²C/SPI bus stubs, and auto-routed diagrams.</span></li>
+        <li><span class="dot"></span><span><b>Breadboard themes</b> — dark, light or a classic blueprint backdrop.</span></li>
         <li><span class="dot"></span><span><b>Live pin values</b> — real GPIO state, PWM duty and activity on the board.</span></li>
-        <li><span class="dot"></span><span><b>Part placement, rotation, rename &amp; delete</b> — drag from the library and arrange.</span></li>
+        <li><span class="dot"></span><span><b>Drag parts onto the breadboard</b> — pull from the library straight to where you want them.</span></li>
+        <li><span class="dot"></span><span><b>Place, rotate, rename &amp; per-part help</b> — arrange parts, with a Help button for each.</span></li>
         <li><span class="dot"></span><span><b>Wire creation &amp; auto-routing</b> — drag pin-to-pin; wires route and colour-code themselves.</span></li>
         <li><span class="dot"></span><span><b>Connections table</b> — edit every net below the canvas.</span></li>
         <li><span class="dot"></span><span><b>2.54&nbsp;mm grid snap</b> — precise placement with guides.</span></li>
         <li><span class="dot"></span><span><b>Castellation &amp; pin capabilities</b> — edge half-holes and PWM/ADC/I²C/SPI/UART tagging.</span></li>
-        <li><span class="dot"></span><span><b>Standard library with versioning</b> — bundled parts with SemVer and update checks.</span></li>
-        <li><span class="dot"></span><span><b>Driver auto-install</b> — required drivers land on the board when you place a part.</span></li>
+        <li><span class="dot"></span><span><b>Growing Standard library</b> — Pico family, Adafruit Feathers, BME280, ICM20948, HC-SR04, motors &amp; more, with SemVer update checks.</span></li>
+        <li><span class="dot"></span><span><b>One-click driver install</b> — required drivers copy to the board when you place a part, or from the missing-library banner.</span></li>
       </ul>
 
       <div class="ft-theme">Project, export &amp; version control</div>
