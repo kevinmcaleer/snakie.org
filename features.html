@@ -23,7 +23,15 @@ permalink: /features/
   .ft-list li .dot{flex:none;margin-top:7px;width:7px;height:7px;border-radius:50%;background:radial-gradient(circle at 50% 30%,#9ff0a8,#34ad4f);box-shadow:0 0 0 1px rgba(28,122,52,.25);}
   .ft-list li b{font-family:'Space Grotesk',sans-serif;font-weight:700;color:#26241f;}
   .ft-theme{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;letter-spacing:.04em;color:#3a7a34;margin:30px 0 14px;text-transform:uppercase;}
+  /* Instrument gallery — masonry so mixed-height panels pack without gaps. */
+  .ig-grid{column-count:4;column-gap:18px;}
+  .ig-card{break-inside:avoid;margin:0 0 18px;border-radius:14px;overflow:hidden;background:#2b2f36;border:1px solid #b9bdc7;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 1px 2px rgba(0,0,0,.12),0 18px 34px -20px rgba(30,32,38,.5);}
+  .ig-card img{display:block;width:100%;height:auto;}
+  .ig-card figcaption{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;color:#eaeef3;text-align:center;padding:9px 6px;letter-spacing:.02em;background:linear-gradient(180deg,#343942,#23272d);}
+  @media (max-width:1100px){.ig-grid{column-count:3;}}
+  @media (max-width:760px){.ig-grid{column-count:2;}}
   @media (max-width:860px){.ft-grid{grid-template-columns:1fr;}.ft-list{grid-template-columns:1fr;}.ft-h1{font-size:34px;}}
+  @media (max-width:480px){.ig-grid{column-count:1;}}
 </style>
 
 <div style="background:#e7e5df; font-family:Helvetica,Arial,sans-serif; color:#26241f; -webkit-font-smoothing:antialiased; overflow-x:hidden;">
@@ -40,6 +48,7 @@ permalink: /features/
         <a href="/#board" style="color:#4a4d54;">Board View</a>
         <a href="/#instruments" style="color:#4a4d54;">Instruments</a>
         <a href="/features/" style="color:#218c39;font-weight:700;">Features</a>
+        <a href="/support/" style="color:#4a4d54;">Support</a>
       </div>
       <div style="margin-left:auto;display:flex;align-items:center;gap:16px;">
         <a href="https://github.com/kevinmcaleer/Snakie" target="_blank" rel="noopener" style="font-size:13.5px;font-weight:600;color:#4a4d54;">GitHub ↗</a>
@@ -77,6 +86,34 @@ permalink: /features/
         <div class="ft-card"><h3>Teleop &amp; gamepad control</h3><p>Drive robots live from a USB or Bluetooth gamepad with configurable mapping, deadzone and an E-STOP for safety.</p></div>
         <div class="ft-card"><h3>Robot definition (robot.yml)</h3><p>A version-control-friendly project file that records every part, placement and wire — perfect for documentation and collaboration.</p></div>
         <div class="ft-card"><h3>Skeuomorph retro UI</h3><p>A photoreal interface of brushed metal, green felt and ruled paper that's delightful to use and stays out of your way.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTRUMENT GALLERY -->
+  <section style="padding:10px 0 54px;">
+    <div class="ft-wrap">
+      <h2 class="ft-h2">The instrument bench</h2>
+      <p class="ft-sub">A skeuomorphic bench of live instruments — every one shown here running on Snakie's offline <b>simulated device</b>, no hardware attached. <code>watch()</code> a sensor and the right panel opens itself.</p>
+      <div class="ig-grid">
+        <figure class="ig-card"><img src="/assets/img/instruments/scope.jpg" alt="Oscilloscope instrument showing a live green sine wave" loading="lazy"><figcaption>Oscilloscope</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/meter.jpg" alt="Multimeter instrument reading a live voltage" loading="lazy"><figcaption>Multimeter</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/plotter.jpg" alt="Plotter instrument graphing two live series" loading="lazy"><figcaption>Plotter</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/range.jpg" alt="Range instrument with a polar radar sweep" loading="lazy"><figcaption>Range &amp; radar</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/imu.jpg" alt="IMU instrument with a 3D attitude view and compass" loading="lazy"><figcaption>IMU &amp; compass</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/env.jpg" alt="Barometer instrument with an aneroid dial, thermometer and humidity gauge" loading="lazy"><figcaption>Barometer</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/encoder.jpg" alt="Encoder instrument with a position dial" loading="lazy"><figcaption>Encoder</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/button.jpg" alt="Button instrument monitoring an input" loading="lazy"><figcaption>Button</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/led.jpg" alt="LED instrument with digital, PWM and RGB modes" loading="lazy"><figcaption>LED</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/servo.jpg" alt="Servo instrument with an angle dial" loading="lazy"><figcaption>Servo</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/buzzer.jpg" alt="Buzzer instrument with a melody sequencer" loading="lazy"><figcaption>Buzzer &amp; melody</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/sam.jpg" alt="SAM text-to-speech instrument" loading="lazy"><figcaption>SAM speech</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/gamepad.jpg" alt="Gamepad teleop instrument with a virtual joystick" loading="lazy"><figcaption>Gamepad teleop</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/i2c-display.jpg" alt="I2C display mirror instrument" loading="lazy"><figcaption>I²C display</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/pot.jpg" alt="Potentiometer instrument dial" loading="lazy"><figcaption>Potentiometer</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/i2c-detect.jpg" alt="I2C detect scanner instrument" loading="lazy"><figcaption>I²C detect</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/wifi-scan.jpg" alt="Wi-Fi scanner instrument" loading="lazy"><figcaption>Wi-Fi scan</figcaption></figure>
+        <figure class="ig-card"><img src="/assets/img/instruments/bluetooth.jpg" alt="Bluetooth scanner instrument" loading="lazy"><figcaption>Bluetooth</figcaption></figure>
       </div>
     </div>
   </section>
