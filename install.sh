@@ -114,10 +114,28 @@ case "$OS" in
     chmod +x "${APPDIR}/AppRun" 2>/dev/null || true
     ln -sf "${APPDIR}/AppRun" "$BINLINK"
 
-    # Find the app icon inside the extracted bundle (absolute path in the .desktop).
-    ICON="$(find "$APPDIR" -maxdepth 1 \( -iname 'snakie.png' -o -name '.DirIcon' \) -type f 2>/dev/null | head -n1)"
-    [ -n "$ICON" ] || ICON="$(find "$APPDIR" -type f -iname '*.png' -path '*512x512*' 2>/dev/null | head -n1)"
-    [ -n "$ICON" ] || ICON="snakie"
+    # Install the proper Snakie icon into the XDG icon THEME (hicolor) and
+    # reference it BY NAME (Icon=snakie). This is what the Raspberry Pi / LXDE /
+    # GNOME menus want — a loose absolute-path icon often renders generic or at
+    # the wrong size. Real per-size PNGs + a scalable SVG give a crisp menu icon.
+    if [ "$(id -u)" -eq 0 ]; then ICONBASE="/usr/share/icons"; else ICONBASE="${HOME}/.local/share/icons"; fi
+    HICOLOR="${ICONBASE}/hicolor"
+    ICON="snakie"
+    ICON_OK=0
+    info "Installing the application icon…"
+    for sz in 128 256 512; do
+      d="${HICOLOR}/${sz}x${sz}/apps"
+      if mkdir -p "$d" 2>/dev/null && curl -fsSL "https://snakie.org/assets/img/snakie-icon-${sz}.png" -o "${d}/snakie.png" 2>/dev/null; then ICON_OK=1; fi
+    done
+    if mkdir -p "${HICOLOR}/scalable/apps" 2>/dev/null; then
+      curl -fsSL "https://snakie.org/assets/img/snakie-icon.svg" -o "${HICOLOR}/scalable/apps/snakie.svg" 2>/dev/null || true
+    fi
+    # Offline fallback: reference the icon embedded in the AppImage directly.
+    if [ "$ICON_OK" -eq 0 ]; then
+      ICON="$(find "$APPDIR" -maxdepth 1 \( -iname 'snakie.png' -o -name '.DirIcon' \) 2>/dev/null | head -n1)"
+      [ -n "$ICON" ] || ICON="$(find "$APPDIR" -type f -iname '*.png' -path '*apps*' 2>/dev/null | sort -r | head -n1)"
+      [ -n "$ICON" ] || ICON="snakie"
+    fi
 
     # Desktop entry — Categories=Development puts it in the "Programming" group
     # (that's what the Raspberry Pi / LXDE / GNOME menus map that category to).
@@ -138,6 +156,8 @@ StartupWMClass=Snakie
 EOF
     chmod 644 "$DESKTOP" 2>/dev/null || true
     update-desktop-database "$APPS" >/dev/null 2>&1 || true
+    # Refresh the icon cache so the menu shows the Snakie icon immediately.
+    gtk-update-icon-cache -f -t "$HICOLOR" >/dev/null 2>&1 || true
 
     info "Done. Find 'Snakie' under Programming in your app menu, or run:  snakie"
     if ! echo ":$PATH:" | grep -q ":$(dirname "$BINLINK"):"; then
