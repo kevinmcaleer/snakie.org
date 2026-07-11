@@ -78,6 +78,10 @@ permalink: /features/
         <div class="ft-card"><h3>Parts Library &amp; Part Editor</h3><p>A portable, community-authored parts library with a full visual editor for custom boards and components — pins, pads, shapes, text and images.</p></div>
         <div class="ft-card"><h3>On-screen instruments</h3><p>A skeuomorphic bench — oscilloscope, antique barometer, multimeter, plotter and more — fed live and non-invasively by a tiny telemetry library that never interrupts your running program. <code>watch()</code> a sensor and the right instrument opens itself.</p></div>
         <div class="ft-card"><h3>Robotics instrument suite</h3><p>A 3D IMU viewer with a magnetometer compass, distance radar, and button / LED / encoder / display panels — plus gamepad teleop for driving robots live.</p></div>
+        <div class="ft-card"><h3>3-D Robot View</h3><p>Build a robot from primitive blocks or your own STL meshes, join the parts with hinge, slider and wheel joints, and pose it — all in a spinnable 3-D scene saved to <code>robot.yml</code>.</p></div>
+        <div class="ft-card"><h3>Motion Studio</h3><p>Pose your robot, chain poses into sequences (walk cycles) with per-step timing, and blend between them with puppet-control sliders — driving the 3-D model live, and the real servos when a board's connected.</p></div>
+        <div class="ft-card"><h3>Servo &#8596; joint binding</h3><p>Wire a servo, bind it to a joint and calibrate the range (with invert). A running program's servo writes then move the matching joint in the 3-D model, and a <strong>Poses bench</strong> instrument lets you test every pose live.</p></div>
+        <div class="ft-card"><h3>Friendly <code>snakie</code> module</h3><p>Write board code the clear way &mdash; <code>from snakie import Servo, Buzzer, Led, Pin, PWM</code>. One collision-proof name for the hardware classes, so a vendor <code>servo</code> module can&rsquo;t shadow yours.</p></div>
         <div class="ft-card"><h3>Breadboard &amp; schematic views</h3><p>Two fully-wired circuit representations with life-like parts, auto-routed noodle wires and real pinouts.</p></div>
         <div class="ft-card"><h3>File syncing with the device</h3><p>Tick a file to keep it in sync with the connected board — Snakie pushes it on every save, so what's on the board always matches what you're editing.</p></div>
         <div class="ft-card"><h3>SAM text-to-speech</h3><p>Give your robot a voice from a single GPIO pin with the built-in SAM speech instrument — no complex audio libraries.</p></div>
@@ -197,6 +201,7 @@ permalink: /features/
         <li><span class="dot"></span><span><b>Barometer</b> — antique aneroid dial for temperature, pressure &amp; humidity (BME280).</span></li>
         <li><span class="dot"></span><span><b>Plotter</b> — multi-series graphing with auto-scaling and legend.</span></li>
         <li><span class="dot"></span><span><b>Range / radar</b> — distance gauge and polar sweep.</span></li>
+        <li><span class="dot"></span><span><b>Poses bench</b> — a live test bench for a rig's servos: press a saved pose or drag a per-servo slider and the 3-D model (and the real servos) follow.</span></li>
         <li><span class="dot"></span><span><b>IMU 3D viewer &amp; compass</b> — roll/pitch/yaw with a horizon, plus a magnetometer heading.</span></li>
         <li><span class="dot"></span><span><b>Auto-detected instruments</b> — <code>watch()</code> a sensor object and the right panel opens by itself.</span></li>
         <li><span class="dot"></span><span><b>Button &amp; LED panels</b> — monitor inputs, drive digital/PWM/RGB outputs.</span></li>
@@ -207,6 +212,7 @@ permalink: /features/
         <li><span class="dot"></span><span><b>Wi-Fi &amp; Bluetooth scanners</b> — live network and device discovery.</span></li>
         <li><span class="dot"></span><span><b>Buzzer &amp; melody sequencer</b> — RTTTL playback and a drag-to-compose staff.</span></li>
         <li><span class="dot"></span><span><b>Pop-out instruments</b> — undock any panel into its own resizable OS window.</span></li>
+        <li><span class="dot"></span><span><b>One-click on-device library</b> — Snakie installs its tiny MicroPython runtime to the board for you, with a friendly <code>from snakie import Servo, Buzzer, Led, Pin, PWM</code> import for the hardware classes.</span></li>
       </ul>
 
       <div class="ft-theme">Board View, parts &amp; wiring</div>
