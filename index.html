@@ -31,6 +31,7 @@ description: "Snakie is a clean, cross-platform editor for writing MicroPython a
         <a href="#board" class="nav-link" style="color:#4a4d54; text-decoration:none;">Board View</a>
         <a href="#instruments" class="nav-link" style="color:#4a4d54; text-decoration:none;">Instruments</a>
         <a href="/features/" class="nav-link" style="color:#4a4d54; text-decoration:none;">All features</a>
+        <a href="https://app.snakie.org" target="_blank" rel="noopener" class="nav-link" style="color:#218c39; font-weight:700; text-decoration:none;">Try online ↗</a>
         <a href="#install" class="nav-link" style="color:#4a4d54; text-decoration:none;">Install</a>
         <a href="https://docs.snakie.org" class="nav-link" style="color:#4a4d54; text-decoration:none;">Docs</a>
         <a href="/support/" class="nav-link" style="color:#4a4d54; text-decoration:none;">Support</a>
@@ -58,10 +59,16 @@ description: "Snakie is a clean, cross-platform editor for writing MicroPython a
       <p style="font-size:19px; line-height:1.6; color:#5e584f; max-width:660px; margin:22px 0 0;">
         Snakie is a clean, cross-platform editor for writing MicroPython and working with connected boards — wrapped in a photoreal interface of brushed metal, green felt, ruled paper and recessed glass. Editor, REPL, live Board View and on-screen instruments, in one window. Work offline on a built-in simulated device, and keep your files synced to the board as you type.
       </p>
+      <p style="font-size:16px; line-height:1.6; color:#5e584f; max-width:660px; margin:14px 0 0;">
+        No install? <a href="https://app.snakie.org" target="_blank" rel="noopener" style="color:#218c39; font-weight:700; text-decoration:none;">Run Snakie in your browser</a> — the full editor, the simulator and 3-D Robot View, right on a Chromebook.
+      </p>
 
       <div style="display:flex; align-items:center; gap:18px; margin-top:34px; flex-wrap:wrap;">
         <a href="https://github.com/kevinmcaleer/Snakie/releases/latest" target="_blank" rel="noopener" class="btn-green" style="display:inline-flex; align-items:center; gap:10px; padding:15px 30px; border-radius:26px; background:linear-gradient(180deg,#8fe49a,#34ad4f 52%,#218c39); border:1px solid #1c7a34; box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 -3px 6px rgba(0,0,0,.22),0 3px 7px rgba(0,0,0,.28); color:#fff; font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; text-shadow:0 -1px 0 rgba(0,0,0,.3); text-decoration:none;">
           <svg width="18" height="18" style="display:block"><use href="#ic-download"></use></svg> Download Snakie
+        </a>
+        <a href="https://app.snakie.org" target="_blank" rel="noopener" class="btn-ghost" style="display:inline-flex; align-items:center; gap:9px; padding:15px 26px; border-radius:26px; background:linear-gradient(180deg,#fbfbfd,#eceef2); border:1px solid #9498a1; box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(0,0,0,.14); color:#218c39; font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; text-decoration:none;">
+          Try it in your browser →
         </a>
         <div style="display:inline-flex; align-items:stretch; border-radius:12px; overflow:hidden; border:1px solid #9498a1; box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(0,0,0,.2); background:linear-gradient(180deg,#fbfbfd,#cdd1d8); font-family:'Space Grotesk',sans-serif;">
           <a href="https://github.com/kevinmcaleer/Snakie/releases/latest" target="_blank" rel="noopener" class="os-pick" style="padding:10px 18px; display:flex; flex-direction:column; align-items:center; gap:1px; color:#3a3d44; text-decoration:none;"><span style="font-size:13px; font-weight:600;">macOS</span><span style="font-size:10.5px; color:#7a7e86; font-family:'IBM Plex Mono',monospace;">.dmg</span></a>
@@ -88,6 +95,8 @@ description: "Snakie is a clean, cross-platform editor for writing MicroPython a
 
       <div style="margin-top:24px; display:flex; flex-wrap:wrap; gap:10px 26px; align-items:center; font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:500; color:#8a847a;">
         <span>Runs on macOS · Windows · Linux</span>
+        <span style="width:4px; height:4px; border-radius:50%; background:#bdb8ad;"></span>
+        <span>Or in the browser — no install</span>
         <span style="width:4px; height:4px; border-radius:50%; background:#bdb8ad;"></span>
         <span>Built on Electron</span>
         <span style="width:4px; height:4px; border-radius:50%; background:#bdb8ad;"></span>
@@ -243,6 +252,12 @@ description: "Snakie is a clean, cross-platform editor for writing MicroPython a
       <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#9a948a;">Download &amp; install</div>
       <h2 style="font-family:'Space Grotesk',sans-serif; font-size:36px; font-weight:700; letter-spacing:-.015em; color:#211f1a; margin:12px 0 0;">Up and running in a couple of minutes.</h2>
       <p style="font-size:16px; line-height:1.6; color:#5e584f; max-width:620px; margin:14px 0 0;">Grab the latest signed installer for your platform from the GitHub Releases page, then follow the steps below.</p>
+
+      <!-- No install: run in the browser -->
+      <div style="margin-top:26px; max-width:720px; display:flex; flex-wrap:wrap; align-items:center; gap:14px; padding:16px 20px; border-radius:14px; background:linear-gradient(180deg,#f0faf1,#e2f3e5); border:1px solid #bfe0c4; box-shadow:inset 0 1px 0 #fff;">
+        <span style="font-size:15px; color:#2f5d44;"><strong>Don't want to install anything?</strong> Snakie runs in your browser — great for Chromebooks and classrooms. Write and run MicroPython on the built-in simulator, watch the instruments, and build robots in the 3-D Robot View. Open a folder to edit and save files from your computer (Chromium browsers). For real boards and firmware flashing, use the desktop app.</span>
+        <a href="https://app.snakie.org" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; padding:11px 22px; border-radius:22px; background:linear-gradient(180deg,#8fe49a,#34ad4f 52%,#218c39); border:1px solid #1c7a34; box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 2px 4px rgba(0,0,0,.2); color:#fff; font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; text-shadow:0 -1px 0 rgba(0,0,0,.3); text-decoration:none;">Open app.snakie.org ↗</a>
+      </div>
 
       <!-- One-line install (macOS & Linux / Raspberry Pi) -->
       <div style="margin-top:34px; max-width:720px;">
