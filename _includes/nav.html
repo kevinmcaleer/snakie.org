@@ -1,0 +1,23 @@
+{%- assign here = include.active -%}
+<nav class="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="Snakie home">
+      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><use href="#snake"></use></svg>
+      <span class="brand-name">Snakie</span>
+    </a>
+    <span class="brand-by">by <a href="https://www.kevsrobots.com" target="_blank" rel="noopener">kevsrobots</a></span>
+    <div class="nav-links">
+      <a href="/#workspaces">Workspaces</a>
+      <a href="/#instruments">Instruments</a>
+      <a href="/features/"{% if here == 'features' %} class="is-active"{% endif %}>All features</a>
+      <a href="/#install">Install</a>
+      <a href="https://docs.snakie.org">Docs</a>
+      <a href="/support/"{% if here == 'support' %} class="is-active"{% endif %}>Support</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://github.com/kevinmcaleer/Snakie" target="_blank" rel="noopener" class="gh">GitHub ↗</a>
+      <a href="https://app.snakie.org" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Try online</a>
+      <a href="https://github.com/kevinmcaleer/Snakie/releases/latest" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><svg aria-hidden="true"><use href="#ic-download"></use></svg>Download</a>
+    </div>
+  </div>
+</nav>

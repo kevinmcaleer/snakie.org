@@ -6,40 +6,18 @@
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   {% seo %}
   {% feed_meta %}
-  <style>
-    html{scroll-behavior:smooth;}
-    body{margin:0;}
-    *{box-sizing:border-box;}
-    ::selection{background:#34ad4f;color:#fff;}
-
-    /* hover states (ported from the design's style-hover attributes) */
-    .nav-link:hover{color:#218c39 !important;}
-    .gh-link:hover{color:#26241f !important;}
-    .btn-green:hover{filter:brightness(1.06);}
-    .os-pick:hover{background:rgba(255,255,255,.5) !important;}
-    .copy-btn:hover{color:#cfe0d4 !important;border-color:#5a5e66 !important;}
-    .foot-link:hover{color:#fff !important;}
-
-    /* responsive: collapse the desktop grids on smaller screens */
-    @media (max-width:860px){
-      .grid-3{grid-template-columns:1fr !important;}
-      .grid-2-board{grid-template-columns:1fr !important;}
-      .grid-2-build{grid-template-columns:1fr !important;}
-      .footer-grid{grid-template-columns:1fr 1fr !important;}
-      .nav-links{display:none !important;}
-      .hero-h1{font-size:40px !important;}
-    }
-    @media (max-width:520px){
-      .footer-grid{grid-template-columns:1fr !important;}
-      .hero-h1{font-size:32px !important;}
-    }
-  </style>
 </head>
 <body>
+  {% include icons.html %}
+  {% include nav.html active=page.nav %}
+  <main>
   {{ content }}
+  </main>
+  {% include footer.html %}
 
   <script>
     (function () {

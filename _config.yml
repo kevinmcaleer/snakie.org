@@ -1,5 +1,8 @@
 title: Snakie
-description: Snakie.org - The home of Snakie
+description: Snakie by kevsrobots — the MicroPython IDE for robots and boards
+
+# Current Snakie release shown in the hero pill and footer.
+snakie_version: "0.91.0"
 url: "https://snakie.org"
 baseurl: ""
 
